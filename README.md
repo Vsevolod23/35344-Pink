@@ -2,6 +2,7 @@
 
 * Студент: [molot](https://htmlacademy.ru/profile/id35344).
 * Наставник: `Илья`.
+* Ссылка на наставника: 'https://github.com/redly'.
 
 --
 
