@@ -1,7 +1,7 @@
 # Проект «Pink»
 
 * Студент: [molot](https://htmlacademy.ru/profile/id35344).
-* Наставник: `Unknown`.
+* Наставник: `Илья`.
 
 --
 
