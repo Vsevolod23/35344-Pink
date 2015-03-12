@@ -3,7 +3,17 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Pink</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+    <style>
+        @font-face {
+    font-family: GothamRounded; /* Гарнитура шрифта */
+    src: url(./fonts/Gotham-Rounded-Book_21018.ttf); /* Путь к файлу со шрифтом */
+    font-family: OpenSans; /* Гарнитура шрифта */
+    src: url(./fonts/kjn1htsa.ttf);
+        }
+    </style>
 </head>
 <body>
 
@@ -24,13 +34,15 @@
     <main class="content">
 
         <div class="page-download">
+            <!-- заголовок -->
+            <span class="page-download__title">Взгляните на жизнь иначе!</span>
             <a href="#" class="btn">Скачать приложение</a>
 
             <div class="page-download__app-wrapper">
                 <ul class="page-download__app-list">
-                    <li><a href="#"><img src="" alt="apple"></a></li>
-                    <li><a href="#"><img src="" alt="android"></a></li>
-                    <li><a href="#"><img src="" alt="windows"></a></li>
+                    <li><a href="#"><img src="./img/icon-apple.png" alt="apple"></a></li>
+                    <li><a href="#"><img src="./img/icon-android.png" alt="android"></a></li>
+                    <li><a href="#"><img src="./img/icon-windows.png" alt="windows"></a></li>
                 </ul>
                 <p class="page-download__description">Доступно для iPhone, iPad, Android, Windows phone, Mac OS,Windows 8</p>
             </div>  
@@ -47,13 +59,13 @@
                     <h3 class="title-h3">Поднимает настроение</h3>
                     <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
                 </li>
-                <!-- исправить ниже -->
-                <li class="page-description__apps">
+                
+                <li class="features-list__item">
                     <h3 class="title-h3">Меняет мир вокруг</h3>
                     <p>Сделайте снимок и украсте его смайликами или текстовой подписью, чтобы усилить эффект</p>
                 </li>
 
-                <li class="page-description__apps">
+                <li class="features-list__item">
                     <h3 class="title-h3">Заводит новых друзей</h3>
                     <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
                 </li>
@@ -63,26 +75,25 @@
 
 
         <div class="slider-quotes">
-            <blockquote class="quote">
+            <blockquote class="quote quote-1">
                 <cite class="quote__author">Николай Петров</cite>
                 <p>&laquo; Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии! &raquo;</p>
             </blockquote>
 
-            <blockquote class="quote">
+            <blockquote class="quote quote-2">
                 <cite class="quote__author"></cite>
                 <p></p>
             </blockquote>
 
-            <blockquote class="quote">
+            <blockquote class="quote quote-3">
                 <cite class="quote__author"></cite>
                 <p></p>
             </blockquote>
 
             <div class="pagination">
                 <button class="pagination__item-active"></button>
-                <!-- Ниже переделать на button -->
-                <i></i>
-                <i></i>
+                <button class="pagination__item"</button>
+                <button class="pagination__item"></button>
             </div>
         </div>
 
@@ -90,31 +101,30 @@
         <div class="slider-price-wrapper">
             
             <table class="slider-price__table">
-                <th>
-                    <td>стандарт 3,99</td>
-                </th>
-                <th>
-                    <td></td>
-                </th>
+                <tr>
+                    <th>стандарт <br><span>3,99 USD</span> </th>
+                </tr>
+                
                 <tr>
                     <td>розовый фильтр</td>
-                    <td>&#10004</td>
+                    
                 </tr>
                 <tr>
                     <td>смайлики</td>
-                    <td>&#10004</td>
+                    
                 </tr>
                 <tr>
                     <td>комментарии</td>
-                    <td>&#10004</td>
+                    
                 </tr>
             </table>
 
-            <div class="slider-price__pagination">
-                <i class="slider-price__pagination-active"></i>
-                <i></i>
-                <i role="button"></i>
+            <div class="pagination">
+                <button class="pagination__item-active"></button>
+                <button></button>
+                <button></button>
             </div>
+        </div>
     
         </div>
     </main>

@@ -1,0 +1,45 @@
+/*== Фоны ==*/
+$bg-blue: #1d2631;
+$bg-white: #fff;
+$bg-grey: #f2f2f2;
+
+
+/*Цвет текста*/
+$text-color-white: #fff;
+$text-color-black: #000;
+$text-color-blue: #283645;
+$text-color-red: #d22856;
+
+/*Цвет границ меню*/
+$border-dark: #000101;
+$border-light: #485461;
+
+
+/*Размеры текста*/
+
+$font-size-body: 10px;
+$font-size-logo: 32px;
+$font-size-nav: 18px;
+$font-size-h2: 24px;
+$font-size-h3: 18px;
+$font-size-p: 14px;
+$font-size-h4: 18px;
+
+/*шрифт текста*/
+$font-family-logo: GothamRounded;
+$font-family-main: OpenSans;
+
+/*ширина блоков*/
+$mob-widts: 320px;
+
+
+/*Павила для ссылок*/
+a{
+	text-decoration: none;
+}
+
+html,
+body{
+	margin: 0;
+	padding: 0;
+}

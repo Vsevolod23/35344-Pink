@@ -1,0 +1,74 @@
+@import 'variables.scss';
+
+
+.page-download{
+	background: $bg-blue url("../img/bg-top.png") no-repeat 50% 0;
+	position: relative;
+	/*top: -65px;*/
+	
+		&__title{
+			font-size: $font-size-h2;
+			font-family: $font-family-main;
+			font-weight: 100;
+			color: $text-color-white;
+			display: inline-block;
+			margin-top: 75px;
+			text-align: center;
+			padding: 10px; 
+
+		}
+
+		.btn{
+			margin: 0 auto;
+			margin-top: 345px;
+			display: block;
+			width: 280px;
+			height: 56px;
+			border: 3px solid #fff;
+			border-radius: 23px;
+			color: #fff;
+			line-height: 50px;
+			vertical-align: middle;
+			text-align: center;
+			font-family: $font-family-main;
+			font-size: 18px;
+			box-sizing: border-box;
+
+
+		}
+
+
+		&__app-wrapper{
+			/*position: absolute;*/
+			margin: 0 auto;
+			bottom: 0;
+			background: $bg-blue;
+			width: 280px;
+
+			p{
+				margin-top: 20px;
+				padding-bottom: 20px;
+				font-size: $font-size-p;
+				font-family: $font-family-main;
+				text-align: center;
+				color: $text-color-white;
+				font-weight: 100;
+			}
+		}
+
+		.page-download__app-list{
+					list-style: none;
+					margin: 0;
+					padding: 0;
+					margin-top: 30px;
+
+						li{
+							display: inline-block;
+							margin-left: 35px;
+							
+						}
+				}
+
+
+
+}

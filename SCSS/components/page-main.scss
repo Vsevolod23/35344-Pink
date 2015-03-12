@@ -1,0 +1,16 @@
+@import '../blocks/block-download.scss';
+
+@import '../blocks/block-product.scss';
+
+@import '../blocks/block-comments.scss';
+
+@import '../blocks/block-price.scss';
+
+@import '../blocks/block-pagination.scss';
+
+
+.content{
+	padding: 0;
+	margin: 0 auto;
+	width: $mob-widts;
+}

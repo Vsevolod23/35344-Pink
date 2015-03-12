@@ -1,0 +1,36 @@
+@import 'variables.scss';
+
+.slider-quotes{
+	margin: 0;
+	padding: 0;
+	padding-bottom: 45px;
+
+			.quote{
+				font-family: $font-family-main; 
+				text-align: center;
+				padding-top: 40px;
+
+
+				&__author{
+					font-size: $font-size-h3;
+					font-style: normal;
+					font-weight: bold;
+				}
+
+				p{
+					color: $text-color-blue;
+					font-size: $font-size-p;
+
+				}
+
+			}
+
+			.quote-2,
+			.quote-3 {
+				display: none;
+			}
+
+	
+
+
+}

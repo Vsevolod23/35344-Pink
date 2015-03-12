@@ -1,0 +1,26 @@
+@import 'variables.scss';
+
+.pagination{
+		margin: 0 auto;
+		width: 100px;
+
+		&__item-active{
+			border-style: none;
+			width: 6px;
+			height: 6px;
+			/*background: $bg-blue;*/
+			background: $bg-white;
+			border: 3px solid $bg-blue;
+			border-radius: 50%;
+		}
+
+		&__item{
+			border-style: none;
+			width: 6px;
+			height: 6px;
+			/*background: $bg-grey;
+			border: 3px solid $bg-grey;
+			border-radius: 50%;*/
+		}
+
+	}

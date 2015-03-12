@@ -1,0 +1,50 @@
+@import 'variables.scss';
+
+.slider-price-wrapper{
+	padding-top: 65px;
+	padding-bottom: 45px;
+	background: $bg-grey;
+
+	.slider-price__table{
+		border-collapse: collapse;
+		font-family: $font-family-main;
+		background: $bg-white;
+			th {
+				background: $bg-blue;
+				width: 270px;
+				height: 95px;
+				background: $bg-blue;
+				color: $text-color-white;
+				font-size: $font-family-main;
+				text-transform: uppercase;
+
+				span{
+					font-size: $font-size-h4;
+					font-weight: lighter;
+				}
+			}
+
+			tr td{
+				border: 2px solid $bg-grey;
+				width: 276px;
+				height: 59px;
+				font-size: $font-family-main;
+				text-transform: uppercase;
+				color: $text-color-blue;
+				padding-left: 20px;
+				box-sizing: border-box;
+			}
+
+	}
+
+}
+
+.slider-price-wrapper:before {
+		content: "";
+		display: block;
+		margin-top: 5px;
+		height: 34px;
+		background: linear-gradient(to top left, $bg-grey 0%, $bg-grey 50%, $bg-white 50%, $bg-white 100%);
+		position: relative;
+		top:-75px;
+	}

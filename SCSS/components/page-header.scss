@@ -1,0 +1,60 @@
+@import 'variables.scss';
+
+.page-header{
+	margin-left:50%;
+	left: -160px;
+	width: $mob-widts;
+	background: rgba(0, 0, 0, .3);
+	min-height: 65px;
+	position: absolute;
+	z-index: 10;
+
+
+	&__logo{
+		color: $text-color-white;
+		font-size: 32px;
+		font-family: $font-family-logo;	
+		vertical-align: middle;
+		line-height: 65px;
+		margin-left: 15px;
+
+	}
+
+
+	&__menu-btn{
+		position: absolute;
+		width: 50px;
+		height: 25px;
+		top: 20px;
+		right: 20px;
+
+
+	}
+	
+	.page-header__nav-menu{
+		display: none;
+		.main-menu {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.main-menu li{
+			border-top:1px solid $border-light;
+			border-bottom: 1px solid $border-dark;
+
+		
+			a {
+				display: block;
+				line-height: 65px;
+				text-align: center;
+				vertical-align: middle;
+				color: $text-color-white;
+				font-size: $font-size-nav;
+				font-family: $font-family-main;
+				text-transform: uppercase;
+			}	
+		}
+	}
+
+}

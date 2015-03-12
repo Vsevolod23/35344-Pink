@@ -1,0 +1,44 @@
+@import 'variables.scss';
+
+.footer-page{
+	padding: 0;
+	margin: 0 auto;
+	width: $mob-widts;
+
+	&__contacts{
+		font-family: $font-family-main;
+		text-align: center;
+
+		.title-h2{
+			font-size: $font-size-h2;
+			font-weight: 100;
+			color: $text-color-blue;
+			font-family: $font-family-main;
+
+		}
+		.title-h4 {
+			font-size: $font-size-h4;
+			font-weight: bold;
+			color: $text-color-blue;
+			font-family: $font-family-main;
+			margin: 0;
+		}
+
+		a,
+		p{
+			display: inline-block;
+			font-size: 24px;
+			color: $text-color-red;
+			font-weight: 100;
+			margin: 0;
+			margin-bottom: 20px;
+		}
+	
+	}
+
+	&__map{
+		height: 205px;
+		background: url("../img//bg-map.png") no-repeat 100% 100%;
+	}
+	
+}
