@@ -30,43 +30,65 @@ html, body {
   margin: 0;
   padding: 0; }
 
-/* line 3, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
+/*== Фоны ==*/
+/*Цвет текста*/
+/*Цвет границ меню*/
+/*Размеры текста*/
+/*шрифт текста*/
+/*ширина блоков*/
+/*Павила для ссылок*/
+/* line 37, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+a {
+  text-decoration: none; }
+
+/* line 42, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+/* line 4, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
 .page-header {
-  margin-left: 50%;
-  left: -160px;
+  padding: 0;
+  margin: 0 auto;
   width: 320px;
+  left: -160px;
   background: rgba(0, 0, 0, 0.3);
   min-height: 65px;
-  position: absolute;
-  z-index: 10; }
-  /* line 13, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
+  z-index: 10;
+  overflow: auto;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+  /* line 18, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
   .page-header__logo {
     color: #fff;
     font-size: 32px;
-    font-family: GothamRounded;
+    font-family: OpenSans;
     vertical-align: middle;
     line-height: 65px;
     margin-left: 15px; }
-  /* line 24, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
+  /* line 29, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
   .page-header__menu-btn {
     position: absolute;
     width: 50px;
     height: 25px;
     top: 20px;
     right: 20px; }
-  /* line 34, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
+  /* line 39, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
   .page-header .page-header__nav-menu {
     display: none; }
-    /* line 36, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
+    /* line 41, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
     .page-header .page-header__nav-menu .main-menu {
       list-style: none;
       margin: 0;
       padding: 0; }
-    /* line 42, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
+    /* line 47, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
     .page-header .page-header__nav-menu .main-menu li {
       border-top: 1px solid #485461;
       border-bottom: 1px solid #000101; }
-      /* line 47, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
+      /* line 52, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-header.scss */
       .page-header .page-header__nav-menu .main-menu li a {
         display: block;
         line-height: 65px;
@@ -96,22 +118,24 @@ html, body {
 /* line 4, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-download.scss */
 .page-download {
   background: #1d2631 url("../img/bg-top.png") no-repeat 50% 0;
-  position: relative
+  position: relative;
+  padding-top: 1px;
+  padding-bottom: 10px
   /*top: -65px;*/ }
-  /* line 9, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-download.scss */
+  /* line 11, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-download.scss */
   .page-download__title {
     font-size: 24px;
     font-family: OpenSans;
     font-weight: 100;
     color: #fff;
-    display: inline-block;
+    display: block;
     margin-top: 75px;
     text-align: center;
     padding: 10px; }
-  /* line 21, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-download.scss */
+  /* line 23, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-download.scss */
   .page-download .btn {
     margin: 0 auto;
-    margin-top: 345px;
+    margin-top: 322px;
     display: block;
     width: 280px;
     height: 56px;
@@ -124,29 +148,29 @@ html, body {
     font-family: OpenSans;
     font-size: 18px;
     box-sizing: border-box; }
-  /* line 41, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-download.scss */
+  /* line 43, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-download.scss */
   .page-download__app-wrapper {
     /*position: absolute;*/
     margin: 0 auto;
     bottom: 0;
     background: #1d2631;
     width: 280px; }
-    /* line 48, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-download.scss */
+    /* line 50, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-download.scss */
     .page-download__app-wrapper p {
       margin-top: 20px;
-      padding-bottom: 20px;
+      padding-bottom: 11px;
       font-size: 14px;
       font-family: OpenSans;
       text-align: center;
       color: #fff;
       font-weight: 100; }
-  /* line 59, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-download.scss */
+  /* line 61, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-download.scss */
   .page-download .page-download__app-list {
     list-style: none;
     margin: 0;
     padding: 0;
     margin-top: 30px; }
-    /* line 65, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-download.scss */
+    /* line 67, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-download.scss */
     .page-download .page-download__app-list li {
       display: inline-block;
       margin-left: 35px; }
@@ -167,15 +191,31 @@ html, body {
   margin: 0;
   padding: 0; }
 
-/* line 3, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
+/*== Фоны ==*/
+/*Цвет текста*/
+/*Цвет границ меню*/
+/*Размеры текста*/
+/*шрифт текста*/
+/*ширина блоков*/
+/*Павила для ссылок*/
+/* line 37, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+a {
+  text-decoration: none; }
+
+/* line 42, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+/* line 4, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
 .product {
   margin: 0; }
-  /* line 7, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
+  /* line 8, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
   .product-title {
     margin: 0;
     padding: 0;
     padding-top: 40px; }
-    /* line 12, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
+    /* line 13, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
     .product-title span {
       display: block;
       font-family: OpenSans;
@@ -184,7 +224,7 @@ html, body {
       font-weight: 100;
       text-align: center;
       margin-bottom: 25px; }
-  /* line 24, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
+  /* line 25, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
   .product .features-list {
     list-style: none;
     margin: 0 auto;
@@ -192,22 +232,22 @@ html, body {
     padding-top: 40px;
     background: #f2f2f2
     /*width: 320px;*/ }
-    /* line 32, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
+    /* line 33, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
     .product .features-list__item {
       display: inline-block;
       text-align: center;
       font-family: OpenSans;
       margin-bottom: 30px; }
-      /* line 39, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
+      /* line 40, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
       .product .features-list__item .title-h3 {
         font-size: 18px;
         padding: 0;
         margin: 0; }
-      /* line 45, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
+      /* line 46, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
       .product .features-list__item p {
         font-size: 14px;
         color: #283645; }
-  /* line 54, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
+  /* line 55, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
   .product .features-list:after {
     content: "";
     margin: 0 auto;
@@ -216,7 +256,7 @@ html, body {
     height: 280px;
     background: #f2f2f2 url("../img/bg-product.png") no-repeat; }
 
-/* line 67, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
+/* line 68, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-product.scss */
 .product-title:after {
   content: "";
   display: block;
@@ -258,8 +298,9 @@ html, body {
     /* line 20, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-comments.scss */
     .slider-quotes .quote p {
       color: #283645;
-      font-size: 14px; }
-  /* line 29, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-comments.scss */
+      font-size: 14px;
+      margin-bottom: 30px; }
+  /* line 30, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-comments.scss */
   .slider-quotes .quote-2, .slider-quotes .quote-3 {
     display: none; }
 
@@ -279,49 +320,21 @@ html, body {
   margin: 0;
   padding: 0; }
 
-/* line 3, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-price.scss */
-.slider-price-wrapper {
-  padding-top: 65px;
-  padding-bottom: 45px;
-  background: #f2f2f2; }
-  /* line 8, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-price.scss */
-  .slider-price-wrapper .slider-price__table {
-    border-collapse: collapse;
-    font-family: OpenSans;
-    background: #fff; }
-    /* line 12, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-price.scss */
-    .slider-price-wrapper .slider-price__table th {
-      background: #1d2631;
-      width: 270px;
-      height: 95px;
-      background: #1d2631;
-      color: #fff;
-      font-size: OpenSans;
-      text-transform: uppercase; }
-      /* line 21, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-price.scss */
-      .slider-price-wrapper .slider-price__table th span {
-        font-size: 18px;
-        font-weight: lighter; }
-    /* line 27, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-price.scss */
-    .slider-price-wrapper .slider-price__table tr td {
-      border: 2px solid #f2f2f2;
-      width: 276px;
-      height: 59px;
-      font-size: OpenSans;
-      text-transform: uppercase;
-      color: #283645;
-      padding-left: 20px;
-      box-sizing: border-box; }
+/*== Фоны ==*/
+/*Цвет текста*/
+/*Цвет границ меню*/
+/*Размеры текста*/
+/*шрифт текста*/
+/*ширина блоков*/
+/*Павила для ссылок*/
+/* line 37, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+a {
+  text-decoration: none; }
 
-/* line 42, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-price.scss */
-.slider-price-wrapper:before {
-  content: "";
-  display: block;
-  margin-top: 5px;
-  height: 34px;
-  background: linear-gradient(to top left, #f2f2f2 0%, #f2f2f2 50%, #fff 50%, #fff 100%);
-  position: relative;
-  top: -75px; }
+/* line 42, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+html, body {
+  margin: 0;
+  padding: 0; }
 
 /*== Фоны ==*/
 /*Цвет текста*/
@@ -339,29 +352,175 @@ html, body {
   margin: 0;
   padding: 0; }
 
-/* line 3, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-pagination.scss */
+/* line 4, C:\Users\Учеба\Desktop\Pink проект\SCSS/helper.scss */
+a {
+  text-decoration: none; }
+
+/* line 9, C:\Users\Учеба\Desktop\Pink проект\SCSS/helper.scss */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+/* line 5, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-price.scss */
+.slider-price-wrapper {
+  padding-top: 65px;
+  padding-bottom: 45px;
+  background: #f2f2f2;
+  overflow: hidden; }
+  /* line 11, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-price.scss */
+  .slider-price-wrapper .slider-price__table {
+    border-collapse: collapse;
+    font-family: OpenSans;
+    background: #fff;
+    margin-bottom: 40px;
+    width: 828px; }
+    /* line 17, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-price.scss */
+    .slider-price-wrapper .slider-price__table tr th {
+      background: #1d2631;
+      width: 276px;
+      height: 95px;
+      background: #1d2631;
+      color: #fff;
+      font-size: OpenSans;
+      text-transform: uppercase;
+      border-right: 2px solid #f2f2f2;
+      border-left: 2px solid #f2f2f2; }
+      /* line 28, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-price.scss */
+      .slider-price-wrapper .slider-price__table tr th span {
+        font-size: 18px;
+        font-weight: lighter; }
+    /* line 34, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-price.scss */
+    .slider-price-wrapper .slider-price__table tr td {
+      border: 2px solid #f2f2f2;
+      border-top-style: none;
+      width: 276px;
+      height: 59px;
+      font-size: OpenSans;
+      text-transform: uppercase;
+      color: #283645;
+      padding-left: 20px;
+      box-sizing: border-box; }
+
+/* line 50, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-price.scss */
+.slider-price-wrapper:before {
+  content: "";
+  display: block;
+  position: relative;
+  top: -70px;
+  margin-top: 5px;
+  height: 34px;
+  background: linear-gradient(to top left, #f2f2f2 0%, #f2f2f2 50%, #fff 50%, #fff 100%); }
+
+/*== Фоны ==*/
+/*Цвет текста*/
+/*Цвет границ меню*/
+/*Размеры текста*/
+/*шрифт текста*/
+/*ширина блоков*/
+/*Павила для ссылок*/
+/* line 37, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+a {
+  text-decoration: none; }
+
+/* line 42, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+/*== Фоны ==*/
+/*Цвет текста*/
+/*Цвет границ меню*/
+/*Размеры текста*/
+/*шрифт текста*/
+/*ширина блоков*/
+/*Павила для ссылок*/
+/* line 37, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+a {
+  text-decoration: none; }
+
+/* line 42, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+/* line 4, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-pagination.scss */
 .pagination {
   margin: 0 auto;
-  width: 100px; }
-  /* line 7, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-pagination.scss */
+  width: 100px;
+  font-size: 0
+  /*
+		button{
+			border: 0;
+			padding: 0;
+			margin: 0;
+		}*/ }
+  /* line 15, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-pagination.scss */
   .pagination__item-active {
+    width: 12px;
+    height: 12px;
+    padding: 0;
+    background: #fff;
     border-style: none;
+    border-radius: 50%;
+    vertical-align: middle;
+    line-height: 12px;
+    margin-right: 19px;
+    border: 3px solid #1d2631; }
+  /* line 22, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-pagination.scss */
+  .pagination__item {
     width: 6px;
     height: 6px;
-    /*background: $bg-blue;*/
-    background: #fff;
-    border: 3px solid #1d2631;
-    border-radius: 50%; }
-  /* line 17, C:/Users/Учеба/Desktop/Pink проект/SCSS/blocks/block-pagination.scss */
-  .pagination__item {
+    padding: 0;
+    background: #bec2c7;
     border-style: none;
-    width: 6px;
-    height: 6px
-    /*background: $bg-grey;
-			border: 3px solid $bg-grey;
-			border-radius: 50%;*/ }
+    border-radius: 50%;
+    vertical-align: middle;
+    line-height: 12px;
+    margin-right: 19px;
+    border: 3px solid #bec2c7; }
 
-/* line 12, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-main.scss */
+/*== Фоны ==*/
+/*Цвет текста*/
+/*Цвет границ меню*/
+/*Размеры текста*/
+/*шрифт текста*/
+/*ширина блоков*/
+/*Павила для ссылок*/
+/* line 37, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+a {
+  text-decoration: none; }
+
+/* line 42, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+/* line 4, C:\Users\Учеба\Desktop\Pink проект\SCSS/helper.scss */
+a {
+  text-decoration: none; }
+
+/* line 9, C:\Users\Учеба\Desktop\Pink проект\SCSS/helper.scss */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+/*== Фоны ==*/
+/*Цвет текста*/
+/*Цвет границ меню*/
+/*Размеры текста*/
+/*шрифт текста*/
+/*ширина блоков*/
+/*Павила для ссылок*/
+/* line 37, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+a {
+  text-decoration: none; }
+
+/* line 42, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+/* line 16, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-main.scss */
 .content {
   padding: 0;
   margin: 0 auto;
@@ -383,29 +542,45 @@ html, body {
   margin: 0;
   padding: 0; }
 
-/* line 3, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-footer.scss */
+/*== Фоны ==*/
+/*Цвет текста*/
+/*Цвет границ меню*/
+/*Размеры текста*/
+/*шрифт текста*/
+/*ширина блоков*/
+/*Павила для ссылок*/
+/* line 37, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+a {
+  text-decoration: none; }
+
+/* line 42, C:\Users\Учеба\Desktop\Pink проект\SCSS/variables.scss */
+html, body {
+  margin: 0;
+  padding: 0; }
+
+/* line 4, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-footer.scss */
 .footer-page {
   padding: 0;
   margin: 0 auto;
   width: 320px; }
-  /* line 8, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-footer.scss */
+  /* line 7, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-footer.scss */
   .footer-page__contacts {
     font-family: OpenSans;
     text-align: center; }
-    /* line 12, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-footer.scss */
+    /* line 11, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-footer.scss */
     .footer-page__contacts .title-h2 {
       font-size: 24px;
       font-weight: 100;
       color: #283645;
       font-family: OpenSans; }
-    /* line 19, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-footer.scss */
+    /* line 18, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-footer.scss */
     .footer-page__contacts .title-h4 {
       font-size: 18px;
       font-weight: bold;
       color: #283645;
       font-family: OpenSans;
       margin: 0; }
-    /* line 28, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-footer.scss */
+    /* line 27, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-footer.scss */
     .footer-page__contacts a, .footer-page__contacts p {
       display: inline-block;
       font-size: 24px;
@@ -413,7 +588,32 @@ html, body {
       font-weight: 100;
       margin: 0;
       margin-bottom: 20px; }
-  /* line 39, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-footer.scss */
+  /* line 37, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-footer.scss */
+  .footer-page__contacts:after {
+    content: '';
+    /*height: 35px;*/
+    position: relative;
+    top: 57px;
+    border-style: solid;
+    border-width: 35px 160px 0 160px;
+    border-color: #fff transparent transparent transparent; }
+  /* line 49, C:/Users/Учеба/Desktop/Pink проект/SCSS/components/page-footer.scss */
   .footer-page__map {
     height: 205px;
-    background: url("../img//bg-map.png") no-repeat 100% 100%; }
+    background: url("../img//bg-map.png") no-repeat 50% 100%; }
+
+/*== Фоны ==*/
+/*Цвет текста*/
+/*Цвет границ меню*/
+/*Размеры текста*/
+/*шрифт текста*/
+/*ширина блоков*/
+/*Павила для ссылок*/
+/* line 37, C:/Users/Учеба/Desktop/Pink проект/SCSS/variables.scss */
+a {
+  text-decoration: none; }
+
+/* line 42, C:/Users/Учеба/Desktop/Pink проект/SCSS/variables.scss */
+html, body {
+  margin: 0;
+  padding: 0; }

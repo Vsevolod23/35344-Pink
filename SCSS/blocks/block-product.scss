@@ -1,4 +1,5 @@
 @import 'variables.scss';
+@import 'mixin.scss';
 
 .product{
 	margin: 0;
@@ -51,7 +52,7 @@
 
 	}
 	
-	.features-list:after{
+	.features-list:after {
 		content: "";
 		margin: 0 auto;
 		width: 160px;
@@ -64,11 +65,9 @@
 
 }
 
-.product-title:after{
+.product-title:after {
 	content: "";
 	display: block;
-	margin-top: 5px;
-	height: 34px;
-	background: linear-gradient(to top left, $bg-grey 0%, $bg-grey 50%, $bg-white 50%, $bg-white 100%);
+	@include right-triangle;
 
 }

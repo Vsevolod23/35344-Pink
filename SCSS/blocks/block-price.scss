@@ -1,22 +1,29 @@
 @import 'variables.scss';
+@import 'mixin.scss';
+@import 'helper.scss';
 
 .slider-price-wrapper{
 	padding-top: 65px;
 	padding-bottom: 45px;
 	background: $bg-grey;
+	overflow: hidden;
 
 	.slider-price__table{
 		border-collapse: collapse;
 		font-family: $font-family-main;
 		background: $bg-white;
-			th {
+		margin-bottom: 40px;
+		width: 276px * 3;
+			tr th {
 				background: $bg-blue;
-				width: 270px;
+				width: 276px;
 				height: 95px;
 				background: $bg-blue;
 				color: $text-color-white;
 				font-size: $font-family-main;
 				text-transform: uppercase;
+				border-right: 2px solid $bg-grey;
+				border-left: 2px solid $bg-grey;
 
 				span{
 					font-size: $font-size-h4;
@@ -26,6 +33,7 @@
 
 			tr td{
 				border: 2px solid $bg-grey;
+				border-top-style: none;
 				width: 276px;
 				height: 59px;
 				font-size: $font-family-main;
@@ -42,9 +50,7 @@
 .slider-price-wrapper:before {
 		content: "";
 		display: block;
-		margin-top: 5px;
-		height: 34px;
-		background: linear-gradient(to top left, $bg-grey 0%, $bg-grey 50%, $bg-white 50%, $bg-white 100%);
 		position: relative;
-		top:-75px;
+		top:-70px;
+		@include right-triangle;
 	}

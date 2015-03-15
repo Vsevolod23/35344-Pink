@@ -4,6 +4,8 @@
 .page-download{
 	background: $bg-blue url("../img/bg-top.png") no-repeat 50% 0;
 	position: relative;
+	padding-top:1px;
+	padding-bottom: 10px;
 	/*top: -65px;*/
 	
 		&__title{
@@ -11,7 +13,7 @@
 			font-family: $font-family-main;
 			font-weight: 100;
 			color: $text-color-white;
-			display: inline-block;
+			display: block;
 			margin-top: 75px;
 			text-align: center;
 			padding: 10px; 
@@ -20,7 +22,7 @@
 
 		.btn{
 			margin: 0 auto;
-			margin-top: 345px;
+			margin-top: 322px;
 			display: block;
 			width: 280px;
 			height: 56px;
@@ -47,7 +49,7 @@
 
 			p{
 				margin-top: 20px;
-				padding-bottom: 20px;
+				padding-bottom: 11px;
 				font-size: $font-size-p;
 				font-family: $font-family-main;
 				text-align: center;

@@ -1,19 +1,24 @@
 @import 'variables.scss';
+@import 'mixin.scss';
 
 .page-header{
-	margin-left:50%;
+	@include wrapper-center;
 	left: -160px;
-	width: $mob-widts;
 	background: rgba(0, 0, 0, .3);
 	min-height: 65px;
-	position: absolute;
 	z-index: 10;
+	overflow: auto;
+	margin: auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 
 
 	&__logo{
 		color: $text-color-white;
 		font-size: 32px;
-		font-family: $font-family-logo;	
+		font-family: $font-family-main;	
 		vertical-align: middle;
 		line-height: 65px;
 		margin-left: 15px;
