@@ -1,18 +1,5 @@
 @import '../blocks/block-download.scss';
-
 @import '../blocks/block-product.scss';
-
 @import '../blocks/block-comments.scss';
-
 @import '../blocks/block-price.scss';
-
 @import '../blocks/block-pagination.scss';
-
-@import 'helper.scss';
-
-@import 'mixin.scss';
-
-
-.content{
-	@include wrapper-center;
-}

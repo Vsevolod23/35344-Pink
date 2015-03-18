@@ -1,30 +1,18 @@
+/*
+	Мы уже сделали import, повторно его делать не нужно
+*/
 @import 'variables.scss';
 @import 'mixin.scss';
 
 .footer-page{
 	@include wrapper-center;
 
-	&__contacts{
+	&__contacts {
 		font-family: $font-family-main;
 		text-align: center;
 
-		.title-h2{
-			font-size: $font-size-h2;
-			font-weight: 100;
-			color: $text-color-blue;
-			font-family: $font-family-main;
-
-		}
-		.title-h4 {
-			font-size: $font-size-h4;
-			font-weight: bold;
-			color: $text-color-blue;
-			font-family: $font-family-main;
-			margin: 0;
-		}
-
 		a,
-		p{
+		p {
 			display: inline-block;
 			font-size: 24px;
 			color: $text-color-red;
@@ -32,19 +20,17 @@
 			margin: 0;
 			margin-bottom: 20px;
 		}
-	
-	}
-	&__contacts:after{
-		content: '';
-		/*height: 35px;*/
-		position: relative;
-		top: 57px;
-		border-style: solid;
-		border-width: 35px 160px 0 160px;
-		border-color: $bg-white transparent transparent transparent;
 
+		&:after {
+			content: '';
+			/*height: 35px;*/
+			position: relative;
+			top: 57px;
+			border-style: solid;
+			border-width: 35px 160px 0 160px;
+			border-color: $bg-white transparent transparent transparent;
+		}
 	}
-
 
 	&__map{
 		height: 205px;

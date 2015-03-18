@@ -1,0 +1,33 @@
+a {
+    text-decoration: none;
+}
+
+%no-btn {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+%no-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+%list-v {
+    @extend %no-list;
+
+    li {
+        display: block;
+    }
+}
+
+%list-h {
+    @extend %no-list;
+
+    li {
+        @include inline-block;
+    }
+}

@@ -2,6 +2,22 @@
 @import 'mixin.scss';
 @import 'helper.scss';
 
+.slider-price {
+
+	&-wrapper {
+		
+		
+		&:before {
+
+		}
+	}
+
+	&__table {
+
+	}
+
+}
+
 .slider-price-wrapper{
 	padding-top: 65px;
 	padding-bottom: 45px;
@@ -14,7 +30,7 @@
 		background: $bg-white;
 		margin-bottom: 40px;
 		width: 276px * 3;
-			tr th {
+			th {
 				background: $bg-blue;
 				width: 276px;
 				height: 95px;
@@ -31,7 +47,7 @@
 				}
 			}
 
-			tr td{
+			td {
 				border: 2px solid $bg-grey;
 				border-top-style: none;
 				width: 276px;

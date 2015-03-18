@@ -1,6 +1,13 @@
-@import 'variables.scss';
+@mixin inline-block($valign: top) {
+    display: inline-block;
+    vertical-align: $valign;
+}
 
-@mixin wrapper-center{
+/*
+	wrapper-center лучше убрать в helpers и переделать также как no-list
+	pagination-style - лучше просто чтобы контролировалось через классы в верстке
+*/
+@mixin wrapper-center {
 	padding: 0;
 	margin: 0 auto;
 	width: $mob-widts;
@@ -32,7 +39,7 @@
 	border: 3px solid $border-color;
 }
 
-@mixin right-triangle{
+@mixin right-triangle {
 	margin-top: 5px;
 	height: 34px;
 	background: linear-gradient(to top left, $bg-grey 0%, $bg-grey 50%, $bg-white 50%, $bg-white 100%);
