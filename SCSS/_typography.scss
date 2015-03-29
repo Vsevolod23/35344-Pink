@@ -1,13 +1,13 @@
 .title-h2 {
-    font-size: $font-size-h2;
+    font-size: map-get($font-sizes, f-h2);
     font-weight: 100;
-    color: $text-color-blue;
+    color: map-get($bg-clrs, txt-blue);
     margin: 0;
 }
 
 .title-h4 {
-    font-size: $font-size-h4;
+    font-size: map-get($font-sizes, f-h4);
     font-weight: bold;
-    color: $text-color-blue;
+    color: map-get($bg-clrs, txt-blue);
     margin: 0;
 }

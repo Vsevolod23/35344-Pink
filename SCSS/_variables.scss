@@ -3,56 +3,50 @@
 */
 
 $bg-clrs: (
-    blue:  #1d2631,
-    white: #fff,
-    grey: #f2f2f2
+    bg-blue: #1d2631,
+    bg-white: #fff,
+    bg-grey: #f2f2f2
 );
 
 /*
     background: map-get($bg-clrs, blue);
 */
 
-/*== Фоны ==*/
-$bg-blue: #1d2631;
-$bg-white: #fff;
-$bg-grey: #f2f2f2;
-
-
 /*
     Цвет текста
-    $text-clrs
 */
-$text-color-white: #fff;
-$text-color-black: #000;
-$text-color-blue: #283645;
-$text-color-red: #d22856;
+$text-clrs: (
+    txt-white: #fff,
+    txt-black: #000,
+    txt-blue: #283645,
+    txt-red: #d22856
+);
 
 /*
     Цвет границ меню
-
-    $borders-clrs:
 */
-
-$border-dark: #000101;
-$border-light: #485461;
-
+// ?
+$borders-clrs: (
+    // $bd-dark: #000101,
+    // $bd-light: #485461
+);
 
 /*
     Размеры текста
-    $font-sizes:
 */
-
-$font-size-body: 10px;
-$font-size-logo: 32px;
-$font-size-nav: 18px;
-$font-size-h2: 24px;
-$font-size-h3: 18px;
-$font-size-p: 14px;
-$font-size-h4: 18px;
+$font-sizes: (
+    f-body: 10px,
+    f-logo: 32px,
+    f-nav: 18px,
+    f-h2: 24px,
+    f-h3: 18px,
+    f-p: 14px,
+    f-h4: 18px,
+    f-h5: 30px
+);
 
 /*шрифт текста*/
-$font-family-logo: GothamRounded;
-$font-family-main: OpenSans;
+$font-family: 'Open Sans', sans-serif;
 
 /*ширина блоков*/
 $mob-widts: 320px;

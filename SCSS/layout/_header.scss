@@ -1,6 +1,6 @@
+
 .page-header {
-    @include wrapper-center;
-    left: -160px;
+    @extend %wrapper-center;
     background: rgba(0, 0, 0, .3);
     min-height: 65px;
     z-index: 10;
@@ -11,13 +11,56 @@
     left: 0;
     right: 0;
 
+    @media(min-width: 480px) and (max-width: 1200px){
+        min-height: 110px;
+    }
+
+    @media(min-width: 1200px){
+        min-height: 110px;
+        padding: 0 85px;
+        box-sizing: border-box;
+        position: absolute;
+    }
+
+
     &__logo {
         @include inline-block(middle);
-        color: $text-color-white;
+        color: map-get($text-clrs, txt-white);
         font-size: 32px;
-        font-family: $font-family-main;
         line-height: 65px;
         margin-left: 15px;
+
+        @media(min-width: 480px) and (max-width: 1200px){
+            line-height: 110px;
+            margin-left: 40px;
+
+            &:before{
+            content: '';
+            width: 60px;
+            height: 40px;
+            background: red;
+            display: inline-block;
+            margin-right: 10px;
+            }       
+        }
+
+        @media(min-width: 1200px){
+            // margin-left: 130px;
+            margin-left: 45px;
+            line-height: 110px;
+            float:left;
+            
+            &:before{
+            content: '';
+            width: 60px;
+            height: 40px;
+            background: red;
+            display: inline-block;
+            margin-right: 10px;
+            }       
+
+        }
+
     }
 
     &__menu-btn {
@@ -26,19 +69,45 @@
         height: 25px;
         top: 20px;
         right: 20px;
+
+       @media(min-width: 480px) and (max-width: 1200px){
+            top: 44px;
+            right: 40px;
+        } 
+
+         @media(min-width: 1200px){
+            display: none;
+         }
     }
     
     &__nav-menu {
         display: none;
+
+        @media(min-width: 1200px){
+            display: block;
+            float: right;
+         }
     }
 }
 
 .main-menu {
     @extend %no-list;
+    background: map-get($bg-clrs, blue);
+
+    @media(min-width: 1200px){
+            display: inline-block;
+            width: 700px;
+            text-align: left;
+    }
 
     li {
-        border-top: 1px solid $border-light;
-        border-bottom: 1px solid $border-dark;
+        border-top: 1px solid map-get($borders-clrs, bd-light);
+        border-bottom: 1px solid map-get($borders-clrs, bd-dark);
+
+        @media(min-width: 1200px){
+            border: none;
+            display: inline-block;
+         }
     }
 
     a {
@@ -46,10 +115,27 @@
         line-height: 65px;
         text-align: center;
         vertical-align: middle;
-        color: $text-color-white;
-        font-size: $font-size-nav;
-        font-family: $font-family-main;
+        color: map-get($text-clrs, txt-white);
+        font-size: map-get($font-sizes, f-nav);
         text-transform: uppercase;
+
+
+        @media(min-width: 1200px){
+            display: block;
+            line-height: 110px;
+            text-align: center;
+            vertical-align: top;
+            color: map-get($text-clrs, txt-white);
+            font-size: map-get($font-sizes, f-nav);
+            text-transform: capitalize;
+            padding: 0 35px;
+
+            &:hover {
+                background: red;
+            }
+         }
     }   
 }
+
+
 

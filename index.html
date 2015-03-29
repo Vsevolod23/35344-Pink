@@ -5,19 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Pink</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     
-    <!--
-        Gotham убрать совсем
-        Open Sans подключить через http://www.google.com/fonts
-    -->
-    <style>
-        @font-face {
-    font-family: GothamRounded; /* Гарнитура шрифта */
-    src: url(../fonts/Gotham-Rounded-Book_21018.ttf); /* Путь к файлу со шрифтом */
-    font-family: OpenSans; /* Гарнитура шрифта */
-    src: url(../fonts/kjn1htsa.ttf);
-        }
-    </style>
 </head>
 <body>
     <header class="page-header page-header-open">
@@ -75,12 +65,21 @@
             </ul>
             <!-- тут будет картинка -->
         </section>
+        
+        <div class="page-research-wrapper">
+            <section class="page-research">
+                <h5 class="title-h5">Эффект на 24 часа!</h5>
+                    <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+                    <p><a href="#">Узнать больше об исследовании</a></p>
+            </section>
+        </div>
 
 
         <div class="slider-quotes">
             <blockquote class="quote quote-1">
-                <cite class="quote__author">Николай Петров</cite>
                 <p>&laquo; Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии! &raquo;</p>
+                <cite class="quote__author">Николай Петров</cite>
+                <p class="info">25 лет, водитель трамвая</p>
             </blockquote>
 
             <blockquote class="quote quote-2">
@@ -105,32 +104,36 @@
             
             <table class="slider-price__table">
                 <tr>
+                    <th></th>
                     <th>база <br><span>1,99 USD</span> </th>
                     <th>стандарт <br><span>3,99 USD</span> </th>
                     <th>анлим <br><span>9,99 USD</span> </th>
                 </tr>
                 
                 <tr>
-                    <td>розовый фильтр</td>
-                    <td>розовый фильтр</td>
-                    <td>розовый фильтр</td>
+                    <td><span>розовый фильтр</span></td>
+                    <td><span>розовый фильтр</span></td>
+                    <td><span>розовый фильтр</span></td>
+                    <td><span>розовый фильтр</span></td>
                     
                 </tr>
                 <tr>
-                    <td>смайлики</td>
-                    <td>смайлики</td>
-                    <td>смайлики</td>
+                    <td><span>смайлики</span></td>
+                    <td><span>смайлики</span></td>
+                    <td><span>смайлики</span></td>
+                    <td><span>смайлики</span></td>
                     
                 </tr>
                 <tr>
-                    <td>комментарии</td>
-                    <td>комментарии</td>
-                    <td>комментарии</td>
+                    <td><span>комментарии</span></td>
+                    <td><span>комментарии</span></td>
+                    <td><span>комментарии</span></td>
+                    <td><span>комментарии</span></td>
                     
                 </tr>
             </table>
 
-            <div class="pagination">
+            <div class="pagination pagination-table">
                 <button class="pagination__item"></button>
                 <button class="pagination__item active"></button>
                 <button class="pagination__item"></button>
@@ -138,28 +141,43 @@
         </div>
     
         </div>
-    </main>
+    
 
-    <footer class="footer-page">
-        <section class="footer-page__contacts">
-            <h2 class="title-h2">Остались вопросы?Свяжитесь с нами!</h2>
+        <section class="contacts">
 
-            <h4 class="title-h4">Звоните:</h4>
-            <!-- <p>8 (800) 100 900</p> -->
-            <!-- Напомни про телефоны рассказать подробнее позднее -->
-            <a href="tel:+7800100900">8 (800) 100 900</a>
-            <h4 class="title-h4">Пишите:</h4>
-            <!-- <p>hello@pinkapp.ru</p> -->
-            <a href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a>
+            <h2 class="title-h2">Остались вопросы? Свяжитесь с нами!</h2>
 
-            <h4 class="title-h4">Приезжайте в гости:</h4>
-            <!-- Напомни про адрес рассказать позднее -->
-            <p>Санкт-Петербург, Невский проспект, д.20</p>
+            <div class="contacts__item">
+                <h4 class="title-h4">Звоните:</h4>
+                <!-- <p>8 (800) 100 900</p> -->
+                <!-- Напомни про телефоны рассказать подробнее позднее -->
+                <a class="" href="tel:+7800100900">8 (800) 100 900</a>
+            </div>
+            <div class="contacts__item">
+                <h4 class="title-h4">Пишите:</h4>
+                <!-- <p>hello@pinkapp.ru</p> -->
+                <a class="" href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a>
+            </div>
+            <div class="contacts__item">
+                <h4 class="title-h4">Приезжайте в гости:</h4>
+                <!-- Напомни про адрес рассказать позднее -->
+                <p class="" >Санкт-Петербург, Невский проспект, д.20</p>
+            </div>
         </section>
-        <div class="footer-page__map">
+        <div class="map">
             
         </div>
-        
+</main>
+
+    <footer class="footer">   
+        <div class="footer__logo"></div>
+        <ul class="social-btn">
+            <a href="#"><li class="social-btn__tw"></li></a>
+            <a href="#"><li class="social-btn__fb"></li></a>
+            <a href="#"><li class="social-btn__yt"></li></a>
+        </ul>
+        <div class="footer__copyright"><span>Website by</span><span>for</span></div>
+
     </footer>
 
 </body>

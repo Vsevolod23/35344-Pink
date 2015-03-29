@@ -3,11 +3,13 @@
 @import '_mixins.scss';
 @import '_helpers.scss';
 
-@import 'normalize.css';
+@import '_normalize.css';
 
 @import 'layout/_base.scss';
 @import 'layout/_header.scss';
+@import 'pages/_mobile.scss';
+
 @import 'layout/_footer.scss';
 
-@import 'components/page-main.scss';
-@import 'components/page-footer.scss';
+ @import 'components/_pagination.scss';
+// @import 'components/page-footer.scss';
