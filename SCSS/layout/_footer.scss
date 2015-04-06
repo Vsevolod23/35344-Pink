@@ -13,8 +13,9 @@
         font-family: $font-family;
         clear: both;
         text-align: center;
-        vertical-align: middle;
+        vertical-align: top;
         line-height: 200px;
+        box-sizing: border-box;
 
 
         &__logo {
@@ -22,6 +23,13 @@
             // width: 225px;
             width: 33%;
             height: 50px;
+            background: url("../img/Pink-logo-footer-2@1x.png") no-repeat 50% 50%;
+            display: block;
+            margin-top: 70px;
+
+            @media(min-width: 1200px){
+                background: url("../img/Pink-logo-footer-3@1x.png") no-repeat 50% 50%;
+            }
         } 
 
         &__copyright {
@@ -29,6 +37,30 @@
             // width: 225px;
             width: 33%;
             height: 50px;
+
+            &-by:after {
+                content: "";
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background:url("../img/sprite.png");
+                background-position: 0 -482px;
+                margin: 0 10px 0 10px;
+                position: relative;
+                top: 10px;
+            }
+
+            &-for:after {
+                content: "";
+                background:url("../img/sprite.png");   
+                background-position: 0 -542px; 
+                width: 27px; 
+                height: 33px;
+                display: inline-block;
+                margin: 0 10px 0 10px;
+                position: relative;
+                top: 10px;
+            }
         } 
 
         .social-btn {
@@ -38,15 +70,41 @@
             width: 33%;
             height: 50px;
             display:  block;
+            margin-top: 20px;
 
                 li {
                     display: inline-block;
                     width: 50px;
                     height: 50px;
                     border-radius: 100%;
-                    background: #fff;
+                    // background: #fff;
                     border: 3px solid #e9ebec;
                     margin: 0 5px;
+
+                    &:hover {
+                        border-color: #283645;
+                    }
+
+                    &:active {
+                        opacity: 0.5;
+                    }
+                }
+
+                &__tw {
+                    background: url(../img/sprite.png);
+                    background-position: 17px -327px;
+                     // width: 19px; height: 15px; 
+                }
+                &__fb{
+                    background: url(../img/sprite.png);
+                    background-position: 20px  -374px;
+                     // width: 9px; height: 19px;
+                }
+
+                &__yt{
+                    background: url("../img/sprite.png");
+                     background-position: 18px  -420px;
+                      // width: 15px; height: 14px;
                 }
         }
 

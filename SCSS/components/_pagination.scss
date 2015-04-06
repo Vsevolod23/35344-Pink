@@ -17,11 +17,31 @@
         height: 6px;
         width: 6px;
 
+        cursor: pointer;
+
+        &:hover{
+            background: #7e868f;
+            border-color: #7e868f;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+
         &.active {
             background: map-get($bg-clrs, bg-white);
             border-color: map-get($bg-clrs, bg-blue);
             height: 12px;
             width: 12px;
+
+            &:hover{
+            background: map-get($bg-clrs, bg-white);
+            border-color: map-get($bg-clrs, bg-blue);
+        }
+
+        &:active {
+            opacity: 1;
+        }
         }
     }
 }

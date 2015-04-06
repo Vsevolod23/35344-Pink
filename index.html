@@ -11,8 +11,8 @@
 </head>
 <body>
     <header class="page-header page-header-open">
-        <a class="page-header__logo" href="#">PINK</a>
-        <button type="button" class="page-header__menu-btn"></button>
+        <a class="page-header__logo" href="#"><!-- PINK --></a>
+        <button type="button" class="page-header__menu-btn"><span></span></button>
 
         <nav class="page-header__nav-menu">
             <ul class="main-menu">
@@ -20,6 +20,7 @@
                 <li><a href="#">возможности</a></li>
                 <li><a href="#">отзывы</a></li>
                 <li><a href="#">стоимость</a></li>
+
             </ul>
         </nav>
     </header>
@@ -49,16 +50,20 @@
             
             <ul class="features-list">
                 <li class="features-list__item">
+                    <div class="features-list__item-img"> <img class="" src="img/bg-product-1.png" alt="img"> </div>
                     <h3 class="title-h3">Поднимает настроение</h3>
                     <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
                 </li>
                 
                 <li class="features-list__item">
+                   <div class="features-list__item-img"><img class="" src="img/bg-product-2.png" alt="img"> </div>
                     <h3 class="title-h3">Меняет мир вокруг</h3>
                     <p>Сделайте снимок и украсте его смайликами или текстовой подписью, чтобы усилить эффект</p>
                 </li>
 
                 <li class="features-list__item">
+                     <div class="features-list__item-img"><img class="" src="img/bg-product-3.png" alt="img"></div>
+                     <div class="features-list__item-img"></div>
                     <h3 class="title-h3">Заводит новых друзей</h3>
                     <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
                 </li>
@@ -76,8 +81,10 @@
 
 
         <div class="slider-quotes">
+            <button type="batton" class="slider-quotes__arrow-left"></button>
+            <button type="batton" class="slider-quotes__arrow-right"></button>
             <blockquote class="quote quote-1">
-                <p>&laquo; Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии! &raquo;</p>
+                <p class="quote-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
                 <cite class="quote__author">Николай Петров</cite>
                 <p class="info">25 лет, водитель трамвая</p>
             </blockquote>
@@ -176,7 +183,7 @@
             <a href="#"><li class="social-btn__fb"></li></a>
             <a href="#"><li class="social-btn__yt"></li></a>
         </ul>
-        <div class="footer__copyright"><span>Website by</span><span>for</span></div>
+        <div class="footer__copyright"><span class="footer__copyright-by">Website by</span><span class="footer__copyright-for">for</span></div>
 
     </footer>
 
