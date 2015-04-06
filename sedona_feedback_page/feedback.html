@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Седона</title>
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="wrapper">
+
+    <div class="header">
+      <img src="img/header.jpg" alt="">
+    </div>
+
+    <div class="container">
+
+      <div class="main-header-text">
+        <h1>Оставьте свой отзыв</h1>
+      </div>
+
+      <p class="after-header-text">Помогите нашим отелям стать лучше! оставьте отзыв о них,<br> а также о посещенных вами достопримечательностях</p>
+
+
+      <form action="/echo" method="post" class="response">
+        <div class="step step1">
+
+          <h2>Представьтесь, пожалуйста</h2>
+
+          <div class="row">
+            <div class="col s-4">
+              <label for="text1">Фамилия: <span>*</span></label>
+              <input type="text" name="lastname" class="lastname" class="<!--error-->">
+            </div>
+            <div class="col s-4">
+              <label for="text2">Имя: <span>*</span></label>
+              <input type="text" name="firstname" class="firstname">
+            </div>
+            <div class="col s-4">
+              <label for="text3">Отчество: </label>
+              <input type="text" name="middlename" class="middlename">
+            </div>
+          </div>
+
+          <h2>Ваше общее впечатление</h2>
+
+          <div class="row radio-row">
+            <div class="col s-6">
+              <input type="radio" name="feedback">
+              <label for="radio1">Скорее положительное</label>
+            </div>
+            <div class="col s-6">
+              <input type="radio" name="feedback">
+              <label for="radio2">Скорее отрицательное</label>
+            </div>
+          </div>
+
+          <h2>Даты вашей поездки</h2>
+
+          <div class="row">
+            <div class="col s-4">
+              <label for="text4">Длительность пребывания: <span>*</span></label>
+
+              <div class="counter clearfix">
+                <button class="counter-action minus">минус</button>
+                <input type="text" name="travel-time" class="travel-time counter-input" value="0">
+                <button class="counter-action plus">плюс</button>
+              </div>
+
+            </div>
+            <div class="col s-4">
+              <label for="text5">Дата приезда: <span>*</span></label>
+              <input type="text" name="start-date" class="start-date">
+            </div>
+            <div class="col s-4">
+              <label for="text6">Дата отъезда: <span>*</span></label>
+              <input type="text" name="finish-date" class="finish-date">
+            </div>
+          </div>
+
+        </div>
+
+        <div class="step step2 same-row">
+
+          <h2>Количество путешественников</h2>
+
+          <div class="row">
+            <div class="col s-4">
+              <label for="text7">Количество взрослых: <span>*</span></label>
+              <div class="counter clearfix">
+                <button class="counter-action minus">минус</button>
+                <input type="text" name="people-count" class="people-count counter-input" value="0">
+                <button class="counter-action plus">плюс</button>
+              </div>
+            </div>
+            <div class="col s-4">
+              <label for="text8">Количество детей: <span>*</span></label>
+              <div class="counter clearfix">
+                <button class="counter-action minus">минус</button>
+                <input type="text" name="children-count" class="children-count counter-input" value="0">
+                <button class="counter-action plus">плюс</button>
+              </div>
+            </div>
+            <div class="col s-4">
+            </div>
+          </div>
+
+          <!-- <div class="row">
+            <div class="col s-4">
+              <label for="text8">Фамилия взрослого №1: <span>*</span></label>
+              <input type="text" id="text8">
+            </div>
+            <div class="col s-4">
+              <label for="text9">Имя взрослого №1: <span>*</span></label>
+              <input type="text" id="text9">
+            </div>
+            <div class="col s-4">
+              <label for="text10">Отчество взрослого №1</label>
+              <input type="text" id="text10">
+            </div>
+          </div> -->
+
+          <!-- <div class="row">
+            <div class="col s-4">
+              <label for="text11">Фамилия взрослого №2: <span>*</span></label>
+              <input type="text" id="text11">
+            </div>
+            <div class="col s-4">
+              <label for="text12">Имя взрослого №2: <span>*</span></label>
+              <input type="text" id="text12">
+            </div>
+            <div class="col s-4">
+              <label for="text13">Отчество взрослого №2</label>
+              <input type="text" id="text13">
+            </div>
+          </div> -->
+
+          <!-- <div class="row">
+            <div class="col s-4">
+              <label for="text14">Фамилия ребенка №1: <span>*</span></label>
+              <input type="text" id="text14">
+            </div>
+            <div class="col s-4">
+              <label for="text15">Имя ребенка №1: <span>*</span></label>
+              <input type="text" id="text15">
+            </div>
+            <div class="col s-4">
+              <label for="text16">Отчество ребенка №1</label>
+              <input type="text" id="text16">
+            </div>
+          </div> -->
+
+        </div>
+
+        <!-- step 3-->
+        <div class="step step3">
+
+          <h2>Посещенные достопримечательности</h2>
+
+          <div class="row">
+            <div class="col s-3">
+              <input type="checkbox" name="devil-bridge" class="devil-bridge" id="checkbox2">
+              <label for="checkbox2">Мост Дьявола</label>
+            </div>
+            <div class="col s-3">
+              <input type="checkbox" name="gore-bell" class="gore-bell" id="checkbox3">
+              <label for="checkbox3">Гора-Колокол</label>
+            </div>
+            <div class="col s-3">
+              <input type="checkbox" name="slide-park" class="slide-park" id="checkbox4">
+              <label for="checkbox4">Слайд-парк</label>
+            </div>
+            <div class="col s-3">
+              <input type="checkbox" name="red-rocks" class="red-rocks" id="checkbox5">
+              <label for="checkbox5">Красные скалы</label>
+            </div>
+          </div>
+
+          <h2>Загрузите фотографии</h2>
+
+          <div class="file">
+            <div class="btn">Выбрать фотографии</div>
+            <input type="file" name="pictures" class="pictures" multiple>
+          </div>
+
+          <!-- <div class="drag-drop-area">перетащите фотографии сюда</div> -->
+
+          <div class="photo-area clearfix">
+
+            <div class="photo">
+              <a href="#" class="delete-photo">удалить</a>
+              <img src="img/photo.jpg" alt="">
+              <p>IMG-686.jpg</p>
+            </div>
+
+            <div class="photo">
+              <a href="#" class="delete-photo">удалить</a>
+              <img src="img/photo.jpg" alt="">
+              <p>IMG-686.jpg</p>
+            </div>
+
+            <div class="photo">
+              <a href="#" class="delete-photo">удалить</a>
+              <img src="img/photo.jpg" alt="">
+              <p>IMG-686.jpg</p>
+            </div>
+
+            <div class="photo">
+              <a href="#" class="delete-photo">удалить</a>
+              <img src="img/photo.jpg" alt="">
+              <p>IMG-686.jpg</p>
+            </div>
+
+            <div class="photo">
+              <a href="#" class="delete-photo">удалить</a>
+              <img src="img/photo.jpg" alt="">
+              <p>IMG-686.jpg</p>
+            </div>
+
+            <div class="photo">
+              <a href="#" class="delete-photo">удалить</a>
+              <img src="img/photo.jpg" alt="">
+              <p>IMG-686.jpg</p>
+            </div>
+
+            <div class="photo">
+              <a href="#" class="delete-photo">удалить</a>
+              <img src="img/photo.jpg" alt="">
+              <p>IMG-686.jpg</p>
+            </div>
+
+          </div>
+
+          <button class="btn active">Отправить отзыв</button>
+
+        </div>
+      </form>
+
+    </div>
+
+    <div class="footer">
+      <img src="img/footer.jpg" alt="">
+    </div>
+  </div>
+
+  <div class="overlay"></div>
+  <div class="modal-wrapper">
+    <div class="table-cell">
+      <div class="modal-content">
+        <div class="top">
+          <p><span>Ваш отзыв отправлен!</span></p>
+          <p>Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+        </div>
+        <div class="bottom">
+          <button class="btn">Закрыть окно</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
