@@ -167,6 +167,10 @@
             background: url("../img/bg-product-midle.png") no-repeat 50% 0;
             position: absolute;
             bottom: 0;
+
+            @media (min-resolution: 1.5dppx) {
+                background: url("../img/iphone-screen-2-3@2x.png") no-repeat 50% 0;
+            }
         }
 
     }
