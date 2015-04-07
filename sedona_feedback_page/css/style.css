@@ -1,0 +1,661 @@
+@charset "UTF-8";
+/* 
+	compile file
+*/
+/* start the foundation style */
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* start the base fraimwork styles. Can include base construction - forms/buttins/navigation and other */
+/* modul section */
+.col {
+  float: left;
+  padding: 0 14px;
+  min-height: 1px;
+}
+
+.row--inline {
+  font-size: 0;
+}
+.row--inline > .col {
+  float: none;
+}
+.row--inline > .col:first-child {
+  padding: 0 13px;
+}
+.row--inline > .col:last-child {
+  padding: 0 13px;
+}
+.row--inline:after {
+  display: none;
+}
+.row .col:first-child {
+  padding-left: 0px;
+}
+.row .col:last-child {
+  padding-right: 0px;
+}
+.row .single {
+  margin: 0 auto;
+  float: none;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.s-1 {
+  width: 8.33%;
+}
+
+.s-2 {
+  width: 16.66%;
+}
+
+.s-3 {
+  width: 25%;
+}
+
+.s-4 {
+  width: 33.33%;
+}
+
+.s-5 {
+  width: 41.66%;
+}
+
+.s-6 {
+  width: 50%;
+}
+
+.s-7 {
+  width: 58.33%;
+}
+
+.s-8 {
+  width: 66.66%;
+}
+
+.s-9 {
+  width: 75%;
+}
+
+.s-10 {
+  width: 83.11%;
+}
+
+.s-11 {
+  width: 91.66%;
+}
+
+.s-12 {
+  width: 100%;
+}
+
+.s-20 {
+  width: 20%;
+}
+
+/* main fraimwork start here */
+.inbox, .col, i, .ico {
+  box-sizing: border-box;
+}
+
+.to-left {
+  float: left;
+}
+
+.to-right {
+  float: right;
+}
+
+.inline, .row--inline > .col, i, .ico, form input[type='text'],
+form textarea,
+form select,
+form input[type='password'], form label, form input[type="checkbox"] + label,
+form input[type="radio"] + label, .progress li, .progress span, .counter-action {
+  display: inline-block;
+  *display: inline;
+  vertical-align: top;
+  zoom: 1;
+}
+
+.clear, .row:after, .clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+/* i ico*/
+i, .ico {
+  font-size: 0;
+  text-indent: -9999px;
+}
+
+/* colors */
+/* basic typography */
+body {
+  font-family: 'PT Sans', sans-serif;
+  color: #000;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 26px;
+  font-weight: 800;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+}
+
+h2 {
+  font-size: 21px;
+  line-height: 26px;
+  position: relative;
+  text-align: center;
+  font-weight: 800;
+  width: 400px;
+  margin: 30px auto;
+}
+h2:before, h2:after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #dbdbdb;
+  width: 300px;
+  position: absolute;
+  top: 50%;
+}
+h2:before {
+  left: -300px;
+}
+h2:after {
+  right: -300px;
+}
+
+p, li, span, label {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+strong, b {
+  font-weight: 800;
+}
+
+/* form style input and other */
+form {
+   /* button:disabled{
+        opacity: .4;
+
+        &:hover{
+            opacity: .4;
+        }
+    }*/
+}
+form input[type='text'],
+form textarea,
+form select,
+form input[type='password'] {
+  box-sizing: border-box;
+  outline: none;
+  background: #f2f2f2;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 18px 22px;
+  color: #000;
+  text-transform: none;
+  width: 100%;
+  box-shadow: none;
+  border: none;
+  border: 1px solid #f2f2f2;
+}
+form input[type='text']:focus,
+form textarea:focus,
+form select:focus,
+form input[type='password']:focus {
+  background: #e5e5e5;
+}
+form input[type='text'].error,
+form textarea.error,
+form select.error,
+form input[type='password'].error {
+  border: 1px solid red;
+}
+form label {
+  cursor: pointer;
+  padding-left: 21px;
+  margin-bottom: 10px;
+}
+form label span {
+  color: #ffa1a1;
+}
+form button {
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'PT Sans', sans-serif;
+}
+form input[type="checkbox"],
+form input[type="radio"] {
+  display: none;
+}
+form input[type="checkbox"] + label,
+form input[type="radio"] + label {
+  line-height: 56px;
+  padding-left: 80px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 800;
+  color: #000;
+  position: relative;
+}
+form input[type="checkbox"] + label:hover,
+form input[type="radio"] + label:hover {
+  opacity: .8;
+}
+form input[type="checkbox"] + label::before,
+form input[type="radio"] + label::before {
+  content: "";
+  display: block;
+  height: 59px;
+  width: 59px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+form input[type="checkbox"] + label::before {
+  background: url(img/ico-checkbox.png) no-repeat center;
+}
+form input[type="radio"] + label::before {
+  background: url(img/ico-radio.png) no-repeat center;
+}
+form input[type="checkbox"]:checked + label::before {
+  background: url(img/ico-checkbox-active.png) no-repeat center;
+}
+form input[type="radio"]:checked + label::before {
+  background: url(img/ico-radio--active.png) no-repeat center;
+}
+form input[type="checkbox"]:disabled + label,
+form input[type="radio"]:disabled + label {
+  opacity: .3;
+}
+form .no-label {
+  padding-top: 34px;
+}
+form .file {
+  position: relative;
+}
+form .file .btn {
+  cursor: pointer;
+  background: #f2f2f2;
+  color: rgba(0, 0, 0, 0.3);
+  width: 460px;
+}
+form .file .btn:hover {
+  background: #d8d8d8;
+}
+form input[type='file'] {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -230px;
+  width: 460px;
+  height: 50px;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.drag-drop-area {
+  cursor: default;
+}
+
+/* btn styles */
+.btn {
+  display: block;
+  margin: 40px auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 15px 20px;
+  text-decoration: none;
+  border: none;
+  min-width: 460px;
+  font-size: 21px;
+  color: #fff;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: #81b3d2;
+  font-family: 'PT Sans', sans-serif;
+}
+.btn:disabled {
+  opacity: .4;
+}
+.btn:disabled:hover {
+  opacity: .4;
+  background: #81b3d2;
+}
+.btn:hover {
+  background: #5b9cc5;
+}
+.btn:active {
+  background: #3e84af;
+}
+.btn.spinner {
+  position: relative;
+}
+.btn.spinner:after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 28px;
+  background: url(img/spinner.gif) no-repeat center;
+  position: absolute;
+  top: 50%;
+  margin-top: -14px;
+  right: 20px;
+  display: none;
+}
+.btn.spinner.active:after {
+  display: block;
+}
+.btn.spinner:hover {
+  background: #81b3d2;
+  opacity: .8;
+}
+.btn.spinner:disabled:after {
+  display: none;
+}
+.btn.spinner:disabled.active:after {
+  display: none;
+}
+
+/* 
+	start the project modules like a pages 
+*/
+body {
+  background: #f2f2f2;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 90px;
+}
+
+.main-header-text {
+  position: relative;
+}
+
+.after-header-text {
+  text-align: center;
+  padding: 25px 0 20px;
+}
+
+/* progress */
+.progress {
+  font-weight: 300;
+  font-size: 0;
+  position: absolute;
+  right: 0;
+  top: 12px;
+}
+.progress li {
+  margin-left: 10px;
+}
+.progress li:first-child {
+  margin-right: 10px;
+}
+.progress span {
+  margin-top: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e5e5e5;
+}
+.progress span.active {
+  background: #81b3d2;
+}
+
+/* */
+.radio-row .col {
+  text-align: center;
+}
+
+/* counter */
+.counter-action {
+  width: 61px;
+  height: 61px;
+  background-color: #f2f2f2;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  font-size: 0;
+}
+.counter-action:hover {
+  background-color: #e5e5e5;
+}
+.counter-action.plus {
+  background-image: url(img/ico-action-minus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.counter-action.minus {
+  background-image: url(img/ico-action-plus.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.counter-input {
+  width: 160px !important;
+  position: relative;
+}
+.counter-input:after {
+  content: "дн.";
+  font-size: 18px;
+  line-height: 26px;
+  color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 17px;
+  right: 20px;
+}
+
+/*step*/
+.step {
+  padding-bottom: 50px;
+}
+
+.same-row .row {
+  margin-bottom: 20px;
+}
+
+.photo-area {
+  padding: 80px 0;
+}
+.photo-area .photo {
+  width: 140px;
+  margin: 15px 25px;
+  position: relative;
+  float: left;
+}
+.photo-area .photo .delete-photo {
+  font-size: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+  background-image: url(img/ico-action-delete.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+}
+.photo-area .photo .delete-photo:hover {
+  background-color: #d8d8d8;
+}
+.photo-area .photo img {
+  width: 100%;
+}
+
+.drag-drop-area {
+  display: block;
+  margin: 40px auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 15px 0;
+  text-decoration: none;
+  border: 3px dashed #81b3d2;
+  width: 100%;
+  min-height: 100px;
+  line-height: 100px;
+  font-size: 21px;
+  color: #000;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: none;
+  font-family: 'PT Sans', sans-serif;
+}
+.drag-drop-area:hover {
+  opacity: .7;
+}
+
+/* modal */
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.overlay.active {
+  display: block;
+}
+
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+.modal-wrapper.active {
+  display: table;
+}
+
+.table-cell {
+  width: 100%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.modal-content {
+  width: 640px;
+  margin: 0 auto;
+}
+.modal-content .top {
+  background: #fff;
+  padding: 50px 100px 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+.modal-content .top p {
+  padding-bottom: 30px;
+}
+.modal-content .top p span {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 800;
+  color: #000;
+}
+.modal-content .bottom {
+  padding: 40px 90px;
+  background: #f2f2f2;
+}
+.modal-content .bottom .btn {
+  margin: 0;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

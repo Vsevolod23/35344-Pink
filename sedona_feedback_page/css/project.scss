@@ -1,0 +1,263 @@
+/* 
+	start the project modules like a pages 
+*/
+
+body{
+	background: #f2f2f2;
+}
+
+.wrapper{
+	width: 1200px;
+	margin: 0 auto;
+	box-shadow: 0 5px 15px rgba(0,0,0,.2);
+	background: #fff;
+}
+
+.container{
+	width: 960px;
+	margin: 0 auto;
+}
+
+.header{
+	margin-bottom: 90px;
+}
+
+.main-header-text{
+	position: relative;
+}
+
+.after-header-text{
+	text-align: center;
+	padding: 25px 0 20px;
+}
+
+/* progress */
+.progress{
+	font-weight: 300;
+	font-size: 0;
+	position: absolute;
+	right: 0;
+	top: 12px;
+
+	li{
+		@extend .inline;
+		margin-left: 10px;
+
+		&:first-child{
+			margin-right: 10px;
+		}
+	}
+
+	span{
+		@extend .inline;
+		margin-top: 7px;
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: $gray-dark;
+
+		&.active{
+			background: $blue;
+		}
+	}
+}
+
+/* */
+.radio-row{
+	.col{
+		text-align: center;
+	}
+}
+
+/* counter */
+.counter{
+	
+}
+
+.counter-action{
+	width: 61px;
+	height: 61px;
+	background-color: $gray;
+	border: none;
+	box-shadow: none;
+	cursor: pointer;
+	@extend .inline;
+	font-size: 0;
+
+	&:hover{
+		background-color: $gray-dark;
+	}
+
+	&.plus{
+		background-image: url(img/ico-action-minus.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	&.minus{
+		background-image: url(img/ico-action-plus.png);
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}
+
+.counter-input{
+	width: 160px!important;
+	position: relative;
+
+	&:after{
+		content: "дн.";
+		font-size: 18px;
+		line-height: 26px;
+		color: rgba(0,0,0,.3);
+		position: absolute;
+		top: 17px;
+		right: 20px;
+	}
+}
+
+/*step*/
+.step{
+	padding-bottom: 50px;
+}
+
+.same-row .row{
+	margin-bottom: 20px;
+}
+
+.photo-area{
+	padding: 80px 0;
+
+	.photo{
+		width: 140px;
+		margin: 15px 25px;
+		position: relative;
+		float: left;
+
+		.delete-photo{
+			font-size: 0;
+			width: 60px;
+			height: 60px;
+			border-radius: 50%;
+			background-color: $gray;
+			background-image: url(img/ico-action-delete.png);
+			background-position: center;
+			background-repeat: no-repeat;
+			position: absolute;
+			top: -30px;
+			right: -30px;
+
+			&:hover{
+				background-color: darken($gray, 10%)
+			}
+		}
+
+		img{
+			width: 100%;
+		}
+	}
+}
+
+.drag-drop-area{
+	display: block;
+	margin: 40px auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	padding: 15px 0;
+	text-decoration: none;
+	border: 3px dashed #81b3d2;
+	width: 100%;
+	min-height: 100px;
+	line-height: 100px;
+	font-size: 21px;
+	color: #000;
+	font-weight: 800;
+	text-transform: uppercase;
+	background: none;
+	font-family: 'PT Sans', sans-serif;
+
+	&:hover{
+		opacity: .7;
+	}
+}
+
+/* modal */
+
+body, html{
+	width: 100%;
+	height: 100%;
+}
+
+.overlay{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	&.active{
+		display: block;
+	}
+}
+
+.modal-wrapper{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+
+	&.active{
+		display: table;
+	}
+}
+
+.table-cell{
+	width: 100%;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.modal-content{
+	width: 640px;
+	margin: 0 auto;
+
+	.top{
+		background: #fff;
+		padding: 50px 100px 0;
+		box-sizing: border-box;
+		text-align: center;
+		
+		p{
+			
+			padding-bottom: 30px;
+			
+			span{
+				font-size: 30px;
+				line-height: 30px;
+				font-weight: 800;
+				color: #000;	
+			}
+		}
+	}
+
+	.bottom{
+		padding: 40px 90px;
+		background: #f2f2f2;
+
+		.btn{
+			margin: 0;
+			cursor: pointer;
+		}
+	}
+}
+
+.footer{
+	margin-top: 30px;
+}
+

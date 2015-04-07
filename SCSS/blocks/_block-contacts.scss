@@ -3,8 +3,11 @@
     text-align: center;
     font-weight: lighter;
     position: relative;
+<<<<<<< HEAD
     padding-top: 50px;
         
+=======
+>>>>>>> origin/master
 
     @media(min-width: 480px) and (max-width: 1200px){
         padding-top: 50px;
@@ -71,6 +74,10 @@
             position: absolute;
             bottom: -35px;
             height: 35px;
+<<<<<<< HEAD
+=======
+            // background: red;
+>>>>>>> origin/master
             left: 0;
             width: 50%;
             background: linear-gradient(to bottom left, map-get($bg-clrs, bg-white) 0%, map-get($bg-clrs, bg-white) 50%, rgba(255, 0, 0, 0) 50%, rgba(255, 0, 0, 0) 100%);
@@ -91,6 +98,10 @@
             position: absolute;
             bottom: -35px;
             height: 35px;
+<<<<<<< HEAD
+=======
+            // background: green;
+>>>>>>> origin/master
             right: 0;
             width: 50%;
             background: linear-gradient(to bottom right, map-get($bg-clrs, bg-white) 0%, map-get($bg-clrs, bg-white) 50%,  rgba(255, 0, 0, 0) 50%, rgba(255, 0, 0, 0) 100%);
@@ -110,6 +121,10 @@
 .map{
         height: 205px;
         background: url("../img/bg-map.png") no-repeat 50% 100%;
+<<<<<<< HEAD
+=======
+        // position: relative;
+>>>>>>> origin/master
 
         &:after {
             content: "";

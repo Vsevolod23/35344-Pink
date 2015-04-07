@@ -11,10 +11,13 @@
     left: 0;
     right: 0;
 
+<<<<<<< HEAD
     &-open{
         background: #1d2631;
     }
 
+=======
+>>>>>>> origin/master
     @media(min-width: 480px) and (max-width: 1200px){
         min-height: 110px;
     }
@@ -40,6 +43,7 @@
         margin-left: 20px;
 
         @media(min-width: 480px) and (max-width: 1200px){
+<<<<<<< HEAD
             margin-left: 40px;
             margin-top: 27px;
             background: url("../img/Pink-logo-2@1x.png") no-repeat;
@@ -53,6 +57,22 @@
                 opacity: .5;
             }
 
+=======
+            // line-height: 110px;
+            margin-left: 40px;
+            margin-top: 27px;
+
+            background: url("../img/Pink-logo-2@1x.png") no-repeat;
+
+            // &:before{
+            // content: '';
+            // width: 60px;
+            // height: 40px;
+            // background: red;
+            // display: inline-block;
+            // margin-right: 10px;
+            // }       
+>>>>>>> origin/master
         }
 
         @media(min-width: 1200px){
@@ -87,6 +107,7 @@
         background: transparent;
         cursor: pointer;
 
+<<<<<<< HEAD
 
         &:hover span{
             background: #d22856;
@@ -107,18 +128,29 @@
         }
 
         &.active span{
+=======
+        &:hover span{
+>>>>>>> origin/master
             background-color: transparent;
 
         }
 
+<<<<<<< HEAD
         &.active span:before {
+=======
+        &:hover span:before {
+>>>>>>> origin/master
             top: 0;
             transform: rotate(45deg) scale(.6, 1);;
             transition-delay: 0, 0.3s;
             // transform: scale(.5, 1);
 
         }
+<<<<<<< HEAD
         &.active span:after {
+=======
+        &:hover span:after {
+>>>>>>> origin/master
             bottom: 0;
             // transform: scale(.5, 1);
             transform: rotate(-45deg) scale(.6, 1);
@@ -179,10 +211,13 @@
     &__nav-menu {
         display: none;
 
+<<<<<<< HEAD
         &-show{
             display: block;
         }
 
+=======
+>>>>>>> origin/master
         @media(min-width: 1200px){
             display: block;
             float: right;
@@ -194,10 +229,13 @@
     @extend %no-list;
     background: #1d2631;
 
+<<<<<<< HEAD
     @media(min-width: 480px) and (max-width: 1200px){
         margin-top: 40px;
     }
 
+=======
+>>>>>>> origin/master
     @media(min-width: 1200px){
             display: inline-block;
             width: 700px;

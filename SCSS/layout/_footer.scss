@@ -20,12 +20,19 @@
 
         &__logo {
             float: left;
+<<<<<<< HEAD
             width: 33%;
             height: 52px;
+=======
+            // width: 225px;
+            width: 33%;
+            height: 50px;
+>>>>>>> origin/master
             background: url("../img/Pink-logo-footer-2@1x.png") no-repeat 50% 50%;
             display: block;
             margin-top: 70px;
 
+<<<<<<< HEAD
             &:hover {
                 background: url("../img/Pink-logo-footer-2-hover@1x.png") no-repeat 50% 50%;
             }
@@ -45,11 +52,16 @@
                     opacity: .5;
                 }
 
+=======
+            @media(min-width: 1200px){
+                background: url("../img/Pink-logo-footer-3@1x.png") no-repeat 50% 50%;
+>>>>>>> origin/master
             }
         } 
 
         &__copyright {
             float: right;
+<<<<<<< HEAD
             width: 33%;
             height: 50px;
 
@@ -68,11 +80,44 @@
              }
             }
 
+=======
+            // width: 225px;
+            width: 33%;
+            height: 50px;
+
+            &-by:after {
+                content: "";
+                display: inline-block;
+                width: 30px;
+                height: 30px;
+                background:url("../img/sprite.png");
+                background-position: 0 -482px;
+                margin: 0 10px 0 10px;
+                position: relative;
+                top: 10px;
+            }
+
+            &-for:after {
+                content: "";
+                background:url("../img/sprite.png");   
+                background-position: 0 -542px; 
+                width: 27px; 
+                height: 33px;
+                display: inline-block;
+                margin: 0 10px 0 10px;
+                position: relative;
+                top: 10px;
+            }
+>>>>>>> origin/master
         } 
 
         .social-btn {
             @extend %no-list;
             float: left;
+<<<<<<< HEAD
+=======
+            // width: 225px;
+>>>>>>> origin/master
             width: 33%;
             height: 50px;
             display:  block;
@@ -83,6 +128,10 @@
                     width: 50px;
                     height: 50px;
                     border-radius: 100%;
+<<<<<<< HEAD
+=======
+                    // background: #fff;
+>>>>>>> origin/master
                     border: 3px solid #e9ebec;
                     margin: 0 5px;
 
