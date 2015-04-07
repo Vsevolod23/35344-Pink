@@ -1,220 +1,133 @@
 (function() {
-    
-var btnIn = document.querySelectorAll(".counter-action");
-var tablo = document.querySelectorAll(".counter-input");
 
-var form = document.querySelector(".response");
-var conteiner = form.querySelector(".same-row");
-var template = document.querySelector("#input-template").innerHTML;
+    var btnIn = document.querySelectorAll(".counter-action"),
+        form = document.querySelector(".response"),
+        conteiner = form.querySelector(".same-row"),
+        template = document.querySelector("#input-template").innerHTML,
+        adultCount = document.querySelector('.js-adultCount');
 
-var adultCount = document.querySelector('.js-adultCount');
+        childCount = document.querySelector('.js-childCount');
 
+        var i = 0,
+            btnL = btnIn.length;
 
-for (var i = 0; i<btnIn.length; i++) {
-    var btn = btnIn[i];
+        for (i = 0; i < btnL; i++) {
 
-    btn.addEventListener("click", function(){
+            btnIn[i].addEventListener("click", function(){
+                var counterParent = this.parentNode,
+                    input = counterParent.querySelector('.counter-input');
 
-        var counterParent = this.parentNode;
-        var input = counterParent.querySelector('.counter-input');
-
-        var counter = 1;
-        var addedRows = document.querySelectorAll('.js-addedRow');
-
-        counter = counter + addedRows.length;
-
-        // var i = counter + 10;
-        
-        // var html = Mustache.render(template, {
-        //     "label" : "text" + i,
-        //     "counter": counter
-        // });  
-
-
-        // console.log(this.classList.contains('minus'));
-
-        if (this.dataset.action  == 'minus' ) {
-            input.value++;
-            console.log("сработал +");
-
-                if (this.classList.contains('js-pepe') == true) {
-                    console.log("сработал+ на кнопке кол-вщ взрослых");
-
-                    var template = document.querySelector("#input-template").innerHTML;
-                    var addedRows = document.querySelectorAll('.js-addedRow'),
-                    counter = addedRows.length + 1;
-
-                    var html = Mustache.render(template, {
-                        "label" : "text" + (10 + counter),
-                        "counter": counter
-                    });
-
-                    if (addedRows.length > 0) {
-                        addedRows[addedRows.length - 1].insertAdjacentHTML('afterend', html);
-                        console.log("первая проверка");
-                    } else {
-                        // Когда ни одна строка до этого не была вставлена
-                        document.querySelector('.js-countTravelers').insertAdjacentHTML('afterend', html); 
-                        // conteiner.innerHTML = conteiner.innerHTML + html; 
-                        console.log("вторая проверка");
-                    }   
-
+                if (this.dataset.action  == 'minus' && input.value > 0) {
+                    input.value--;
+                } else if (this.dataset.action == 'plus') {
+                    input.value++;
                 }
-            // conteiner.innerHTML = conteiner.innerHTML + html;
-         } 
-
-         else if (this.classList.contains('plus') == true && input.value > 1) {
-            input.value--;
-                // console.log(this.classList.contains('plus'));
-
-         } 
-
-         // else if (this.classList.contains('js-pepe') === true ) {
-         //    // var rr = this.classList.contains('js-pepe');
-         //    // console.log(this.classList.contains('js-pepe'));
-         //    console.log(123);
-         // } 
-
-         else return;
-
-        // console.log(counterParent);
-
-    });
-
-}
-
-adultCount.addEventListener('change', function(){   
-    var count = parseInt(this.value, 10),
-        addedRows = document.querySelectorAll('.js-addedRow'),
-        counter = addedRows.length + 1;
-
-    if (addedRows.length > count) {
-        
-        for (var i = 0; i < addedRows.length; i++) {
-            if (i >= count) {
-                addedRows[i].innerHTML = '';
+                if (input.classList.contains('js-adultCount')) {
+                    var event = document.createEvent('HTMLEvents');
+                    
+                    event.initEvent('change', true, false);
+                    input.dispatchEvent(event);
             }
-        }
-    } else if (addedRows.length < count) {
-        var list = [];
+//добавил проверку на кнопки числового поля "кол-во детей"
+                if (input.classList.contains('js-childCount')) {
+                    var event = document.createEvent('HTMLEvents');
+                    
+                    event.initEvent('change', true, false);
+                    input.dispatchEvent(event);
+            }
 
-        for (var k = addedRows.length; k < count; k++, counter++) {
-            list.push({
-                "label" : "text" + (10 + counter),
-                "counter": counter
-            });
-        }
-        
-        var html = Mustache.render(template, {
-            list: list
+            return;
         });
-
-        if (addedRows.length > 0) {
-            addedRows[addedRows.length - 1].insertAdjacentHTML('afterend', html);
-        } else {
-            // Когда ни одна строка до этого не была вставлена
-            document.querySelector('.js-countTravelers').insertAdjacentHTML('afterend', html);  
-        }   
-
-        // conteiner.innerHTML = conteiner.innerHTML + html;
     }
 
-   
-});
+    adultCount.addEventListener('change', function(){   
+        var count = parseInt(this.value, 10),
+            addedRows = document.querySelectorAll('.js-addedRow'),
+            counter = addedRows.length + 1;
+        
+        var i = 0,
+            addedRowsL = addedRows.length;
 
+            if (addedRowsL > count) {
+            for (i = 0; i < addedRowsL; i++) {
+                if (i >= count) {
+                    addedRows[i].parentNode.removeChild(addedRows[i]);
+                }
+            }
+        } else if (addedRowsL < count) {
+            var k = addedRowsL,
+                list = [];
 
-// var btnAdd = document.querySelector('.js-pepe');
-
-//         btnAdd.addEventListener("click", function(){
-//             console.log("gy");
-
-//             var template = document.querySelector("#input-template").innerHTML;
-
-//             var conteiner = form.querySelector(".same-row");
-//             var count = parseInt(this.value, 10),
-//             addedRows = document.querySelectorAll('.js-addedRow'),
-//             counter = addedRows.length + 1;
-
-//             var html = Mustache.render(template, {
-//                 "label" : "text" + (10 + counter),
-//                 "counter": counter
-//             });
-
-//             if (addedRows.length > 0) {
-//                 addedRows[addedRows.length - 1].insertAdjacentHTML('afterend', html);
-//                 console.log("gy1");
-//             } else {
-//                 // Когда ни одна строка до этого не была вставлена
-//                 document.querySelector('.js-countTravelers').insertAdjacentHTML('afterend', html); 
-//                 conteiner.innerHTML = conteiner.innerHTML + html; 
-//                 console.log("gy2");
-//             }   
-
-
-//             console.log("gy3");
-//         });
-
-// var form = document.querySelector(".response");
-// var conteiner = form.querySelector(".same-row");
-// var btnMinus = document.querySelectorAll(".counter-action");
-
-// for (var i = 0; i<btnMinus.length; i++) {
-//  var btnMin = btnMinus[i];
-
-//  btnMin.addEventListener("click", function(){
-//      var counterParent = this.parentNode;
-//      var input = counterParent.querySelector('.counter-input');
-//      var div1 = document.createElement("div");
-//      div1.classList.add("row");
-//      var div2 = document.createElement("div");
-//      div2.classList.add("col");
-//      div2.classList.add("s-4");
-//      var label = document.createElement("label");
-//      var input = document.createElement("input");
-//      // input.type = "text";
-
-//      if (this.dataset.action  == 'plus' ) {
-//          div2.appendChild(label);
-//          div2.appendChild(input);
-//          div1.appendChild(div2);
+            for (k = addedRowsL; k < count; k++, counter++) {
+                list.push({
+                    "label" : "text" + (10 + counter),
+                    "counter": counter,
+                    "age": "взрослого"
+                });
+            }
             
+            var html = Mustache.render(template, {
+                list: list
+            });
 
-//          conteiner.appendChild(div1);
+            if (addedRowsL > 0) {
+                addedRows[addedRowsL - 1].insertAdjacentHTML('afterend', html);
+            } 
+             //добавил проверку которая не работает 
+            else if (document.querySelector('.js-addedRow2') > 0) {
+                 document.querySelectorAll('.js-addedRow2').insertAdjacentHTML('beforebegin', html);
+            }
+            else {
+                // Когда ни одна строка до этого не была вставлена
+                document.querySelector('.js-countTravelers').insertAdjacentHTML('afterend', html);  
+            }
+        }       
+    });
 
+// добавил событие на эту кнопки числового поля "кол-во детей"
 
-//          console.log(counterParent);
-//       } 
+childCount.addEventListener('change', function(){   
+        var count = parseInt(this.value, 10),
+            addedRows2 = document.querySelectorAll('.js-addedRow2'),
+            counter = addedRows2.length + 1;
+        
+        var i = 0,
+            addedRowsL2 = addedRows2.length;
 
-//  });
-// }
+            if (addedRowsL2 > count) {
+            for (i = 0; i < addedRowsL2; i++) {
+                if (i >= count) {
+                    addedRows2[i].parentNode.removeChild(addedRows2[i]);
+                }
+            }
+        } else if (addedRowsL2 < count) {
+            var k = addedRowsL2,
+                list2 = [];
 
+            for (k = addedRowsL2; k < count; k++, counter++) {
+                list2.push({
+                    "label" : "text" + (10 + counter),
+                    "counter": counter,
+                    "age": "ребенка"
+                });
+            }
+            
+            var html2 = Mustache.render(template, {
+                list2: list2
+            });
 
-
-
-
+            if (addedRowsL2 > 0) {
+                addedRows2[addedRowsL2 - 1].insertAdjacentHTML('afterend', html2);
+            }  
+             //добавил проверку которая не работает 
+            else if (document.querySelectorAll('.js-addedRow') > 0) {
+                 document.querySelectorAll('.js-addedRow').insertAdjacentHTML('afterend', html2);
+            }
+            else {
+                // Когда ни одна строка до этого не была вставлена
+                document.querySelector('.js-countTravelers').insertAdjacentHTML('afterend', html2);
+            }
+        }       
+    });
 
 })();
-
-
-// Фильтр числового поля 
-
-// (function() {
-
-// function filter_input(e,regexp)
-// {
-//   e=e || window.event;
-//   var target=e.target || e.srcElement;
-//   var isIE=document.all;
-
-//   if (target.tagName.toUpperCase()=='INPUT')
-//   {
-//     var code=isIE ? e.keyCode : e.which;
-//     if (code<32 || e.ctrlKey || e.altKey) return true;
-
-//     var char=String.fromCharCode(code);
-//     if (!regexp.test(char)) return false;
-//   }
-//   return true;
-// }
-
-// })();
