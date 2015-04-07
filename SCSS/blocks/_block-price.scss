@@ -1,0 +1,159 @@
+.slider-price {
+
+	&-wrapper {
+		padding-top: 65px;
+		padding-bottom: 45px;
+		background: map-get($bg-clrs, bg-grey);
+		overflow: hidden;
+
+		&:before {
+			content: "";
+			display: block;
+			position: relative;
+			top:-70px;
+			@include right-triangle;
+
+		}
+	}
+
+	&__table {
+		border-collapse: collapse;
+		background: map-get($bg-clrs, bg-white);
+		margin-bottom: 40px;
+		width: 276px * 3;
+		margin: 0 auto;
+		box-sizing: border-box;
+		margin-bottom: 40px;
+
+		@media(min-width: 480px) and (max-width: 1200px){
+			width: 150px * 4;			 // position: absolute;
+
+		}
+
+		@media(min-width: 1200px){
+			width: 235px * 4;
+		}
+
+			th {
+				background: map-get($bg-clrs, bg-blue);
+				width: 276px;
+				height: 95px;
+				color: map-get($text-clrs, txt-white);
+				text-transform: uppercase;
+				border-right: 2px solid map-get($bg-clrs, bg-grey);
+				border-left: 2px solid map-get($bg-clrs, bg-grey);
+				position: relative;
+
+				&:nth-child(3):before {
+					content: "";
+					width: 73px;
+					height: 73px;
+					position: absolute;
+					display: block;
+					background: url("../img/bg-price-hit.png") no-repeat;
+					top: 0;
+					left: 0;
+				}
+
+				span{
+					font-size: map-get($font-sizes, f-h4);
+					font-weight: lighter;
+					}
+
+					&:first-of-type{
+					background:map-get($bg-clrs, bg-grey);
+					
+					}
+
+				@media(min-width: 480px) and (max-width: 1200px){
+					width: 150px;
+
+					&:nth-child(3):before {
+						width: 61px;
+						height: 61px;
+						background-size: 100%;
+					}
+
+				}
+			}
+
+			td {
+				border: 2px solid map-get($bg-clrs, bg-grey);
+				border-top-style: none;
+				width: 276px;
+				height: 59px;
+				text-transform: uppercase;
+				color: map-get($text-clrs, txt-blue);
+				padding-left: 20px;
+				box-sizing: border-box;
+				position: relative;
+
+
+					span{
+
+						@media(min-width: 480px) and (max-width: 1200px){
+							text-transform: capitalize;
+
+						}
+
+						 @media(min-width: 1200px){
+							text-transform: capitalize;	
+						 }
+
+					}
+
+					img{
+						position: absolute;
+						// width: 29px;
+						// height: 22px;
+						top: 19px;
+						right: 18px;
+
+						@media(min-width: 480px) and (max-width: 1200px){
+							
+							right: 62px;
+							margin-left: 29px;
+						}
+
+						 @media(min-width: 1200px){
+							right: 103px;
+						 }
+
+					}
+
+				
+
+				@media(min-width: 480px) and (max-width: 1200px){
+				width: 150px;
+				font-size: 14px;
+
+					&:not(:first-of-type) span{
+						display: none;
+					}
+
+				}
+
+				@media(min-width: 1200px){
+					&:not(:first-of-type) span{
+						display: none;
+					}
+				}
+
+			}
+
+
+			 @media(max-width: 480px){
+					th:first-of-type{
+						display: none;
+					}
+
+					td:first-of-type{
+						display: none;
+					}
+				}
+
+	}
+
+}
+
+

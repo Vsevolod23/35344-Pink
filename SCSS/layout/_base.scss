@@ -5,9 +5,9 @@ body {
 }
 
 body {
-    font-family: $font-family-main, sans-serif;
+    font-family: $font-family, sans-serif;
 }
 
 .content {
-    @include wrapper-center;
+    @extend %wrapper-center;
 }
