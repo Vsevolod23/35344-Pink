@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    
     <title>HTML Academy: Pink</title>
     <link rel="stylesheet" href="css/style.css">
-
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-    
 </head>
 <body>
-    <header class="page-header ">
+    <header class="page-header">
         <a class="page-header__logo" href="#"><!-- PINK --></a>
         <button type="button" class="page-header__menu-btn"><span></span></button>
 
@@ -20,7 +20,6 @@
                 <li><a href="#">возможности</a></li>
                 <li><a href="#">отзывы</a></li>
                 <li><a href="#">стоимость</a></li>
-
             </ul>
         </nav>
     </header>
@@ -28,8 +27,7 @@
     <main class="content">
 
         <div class="page-download">
-            <!-- заголовок -->
-            <span class="page-download__title">Взгляните на жизнь иначе!</span>
+            <div class="page-download__title">Взгляните на жизнь иначе!</div>
             <a href="#" class="btn">Скачать приложение</a>
 
             <div class="page-download__app-wrapper">
@@ -56,14 +54,13 @@
                 </li>
                 
                 <li class="features-list__item">
-                   <div class="features-list__item-img"><img class="" src="img/bg-product-2.png" srcset="img/iphone-screen-3-2@2x.png 2x" width="185" alt="img"> </div>
+                    <div class="features-list__item-img"><img class="" src="img/bg-product-2.png" srcset="img/iphone-screen-3-2@2x.png 2x" width="185" alt="img"> </div>
                     <h3 class="title-h3">Меняет мир вокруг</h3>
                     <p>Сделайте снимок и украсте его смайликами или текстовой подписью, чтобы усилить эффект</p>
                 </li>
 
                 <li class="features-list__item">
-                     <div class="features-list__item-img"><img class="" src="img/bg-product-3.png" srcset="img/iphone-screen-3-3@2x.png 2x" width="185" alt="img"></div>
-                     <div class="features-list__item-img"></div>
+                    <div class="features-list__item-img"><img class="" src="img/bg-product-3.png" srcset="img/iphone-screen-3-3@2x.png 2x" width="185" alt="img"></div>
                     <h3 class="title-h3">Заводит новых друзей</h3>
                     <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
                 </li>
@@ -74,8 +71,8 @@
         <div class="page-research-wrapper">
             <section class="page-research">
                 <h5 class="title-h5">Эффект на 24 часа!</h5>
-                    <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-                    <p><a href="#">Узнать больше об исследовании</a></p>
+                <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+                <p><a href="#">Узнать больше об исследовании</a></p>
             </section>
         </div>
 
@@ -83,20 +80,26 @@
         <div class="slider-quotes">
             <button type="batton" class="slider-quotes__arrow-left"></button>
             <button type="batton" class="slider-quotes__arrow-right"></button>
+            <!--
+                Лучше информацию об авторе вынести также внутрь cite
+                Забыл переделать разметку других цитат
+
+                Подумай какую доп. разметку нужно добавить, чтобы реализовать слайдер
+            -->
             <blockquote class="quote quote-1">
                 <p class="quote-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!</p>
                 <cite class="quote__author">Николай Петров</cite>
                 <p class="info">25 лет, водитель трамвая</p>
             </blockquote>
-
+            
             <blockquote class="quote quote-2">
                 <cite class="quote__author"></cite>
-                <p></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nihil, eaque modi quis minus voluptatem placeat sint aliquid consectetur fugiat dolores veniam laudantium sapiente unde quo odit adipisci repudiandae ratione!</p>
             </blockquote>
 
             <blockquote class="quote quote-3">
                 <cite class="quote__author"></cite>
-                <p></p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, voluptatem, sint ad molestiae deserunt ducimus sapiente vitae doloribus assumenda tempora. Debitis, voluptatibus obcaecati doloribus ab error eos vero recusandae soluta!</p>
             </blockquote>
 
             <div class="pagination">
@@ -106,7 +109,6 @@
             </div>
         </div>
 
-        <!-- figure ?-->
         <div class="slider-price-wrapper">
             
             <table class="slider-price__table">
@@ -116,26 +118,29 @@
                     <th>стандарт <br><span>3,99 USD</span> </th>
                     <th>анлим <br><span>9,99 USD</span> </th>
                 </tr>
-                
+                <!--
+                    Пока переделай просто путь до svg файлов
+                    На автоматизации добавим svg спрайт
+                -->
                 <tr>
                     <td><span>розовый фильтр</span></td>
-                    <td><span>розовый фильтр</span><img src="/img/g.png" alt="yes"></td>
-                    <td><span>розовый фильтр</span><img src="/img/g.png" alt="yes"></td>
-                    <td><span>розовый фильтр</span><img src="/img/g.png" alt="yes"></td>
+                    <td><span>розовый фильтр</span><img src="img/g.png" alt="yes"></td>
+                    <td><span>розовый фильтр</span><img src="img/g.png" alt="yes"></td>
+                    <td><span>розовый фильтр</span><img src="img/g.png" alt="yes"></td>
                     
                 </tr>
                 <tr>
                     <td><span>смайлики</span></td>
-                    <td><span>смайлики</span><img src="/img/k.png" alt="no"></td>
-                    <td><span>смайлики</span><img src="/img/g.png" alt="yes"></td>
-                    <td><span>смайлики</span><img src="/img/g.png" alt="yes"></td>
+                    <td><span>смайлики</span><img src="img/k.png" alt="no"></td>
+                    <td><span>смайлики</span><img src="img/g.png" alt="yes"></td>
+                    <td><span>смайлики</span><img src="img/g.png" alt="yes"></td>
                     
                 </tr>
                 <tr>
                     <td><span>комментарии</span></td>
-                    <td><span>комментарии</span><img src="/img/k.png" alt="no"></td>
-                    <td><span>комментарии</span><img src="/img/k.png" alt="no"></td>
-                    <td><span>комментарии</span><img src="/img/g.png" alt="yes"></td>
+                    <td><span>комментарии</span><img src="img/k.png" alt="no"></td>
+                    <td><span>комментарии</span><img src="img/k.png" alt="no"></td>
+                    <td><span>комментарии</span><img src="img/g.png" alt="yes"></td>
                     
                 </tr>
             </table>
@@ -145,10 +150,7 @@
                 <button class="pagination__item active"></button>
                 <button class="pagination__item"></button>
             </div>
-        </div>
-    
-        </div>
-    
+        </div>    
 
         <section class="contacts">
 
@@ -156,26 +158,21 @@
 
             <div class="contacts__item">
                 <h4 class="title-h4">Звоните:</h4>
-                <!-- <p>8 (800) 100 900</p> -->
-                <!-- Напомни про телефоны рассказать подробнее позднее -->
                 <a class="" href="tel:+7800100900">8 (800) 100 900</a>
             </div>
             <div class="contacts__item">
                 <h4 class="title-h4">Пишите:</h4>
-                <!-- <p>hello@pinkapp.ru</p> -->
                 <a class="" href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a>
             </div>
             <div class="contacts__item">
                 <h4 class="title-h4">Приезжайте в гости:</h4>
-                <!-- Напомни про адрес рассказать позднее -->
-                <p class="" >Санкт-Петербург, Невский проспект, д.20</p>
+                <p>Санкт-Петербург, Невский проспект, д.20</p>
             </div>
         </section>
         <div class="map">
-           
             <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=07oBJA1ijiE19JZGiFpj2IdE6oYPbjzB"></script>
         </div>
-</main>
+    </main>
 
     <footer class="footer">   
         <a class="footer__logo" href="#"></a>
@@ -185,55 +182,36 @@
             <a href="#"><li class="social-btn__yt"></li></a>
         </ul>
         <div class="footer__copyright">Website by<a href="#" class="footer__copyright-by">
-            <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     width="25.988px" height="29.922px" viewBox="0 0 25.988 29.922" enable-background="new 0 0 25.988 29.922" xml:space="preserve">
-<path d="M0,0h25.988v29.922l-12.994-4.811L0,29.922V0z M20.154,17.895c-0.241,0-0.509-0.006-0.801-0.018
-    c-0.293-0.014-0.508-0.051-0.645-0.116c-0.225-0.103-0.391-0.26-0.5-0.469c-0.107-0.21-0.162-0.492-0.162-0.854
-    c0-0.394,0.018-1.211,0.055-2.457c0.035-1.244,0.054-2.319,0.054-3.226c0-0.858-0.146-1.556-0.439-2.088
-    c-0.294-0.535-0.688-0.942-1.186-1.223c-0.522-0.289-1.108-0.481-1.758-0.572c-0.65-0.093-1.365-0.139-2.143-0.139
-    c-0.562,0-1.172,0.067-1.83,0.199c-0.659,0.132-1.24,0.318-1.746,0.56C8.54,7.725,8.104,8.02,7.747,8.377
-    C7.39,8.734,7.211,9.137,7.211,9.586c0,0.521,0.173,0.946,0.519,1.271c0.346,0.323,0.857,0.486,1.533,0.486
-    c0.476,0,0.827-0.043,1.057-0.132c0.229-0.089,0.437-0.213,0.622-0.374c0.138-0.12,0.242-0.283,0.314-0.487
-    c0.072-0.205,0.109-0.375,0.109-0.511c0-0.306-0.057-0.622-0.169-0.952c-0.113-0.329-0.181-0.573-0.206-0.734
-    c0.145-0.104,0.335-0.207,0.572-0.308c0.237-0.101,0.533-0.151,0.886-0.151c0.393,0,0.71,0.089,0.952,0.265
-    c0.241,0.177,0.417,0.393,0.53,0.651c0.104,0.225,0.172,0.501,0.205,0.831c0.032,0.327,0.048,0.593,0.048,0.794v1.155
-    c-0.467,0.224-1.207,0.48-2.22,0.767c-1.013,0.285-1.881,0.56-2.604,0.826c-0.378,0.143-0.726,0.3-1.043,0.471
-    c-0.317,0.169-0.597,0.38-0.838,0.639c-0.265,0.281-0.47,0.605-0.615,0.969c-0.145,0.366-0.217,0.811-0.217,1.333
-    c0,0.909,0.329,1.637,0.989,2.189c0.658,0.551,1.455,0.825,2.388,0.825c0.627,0,1.115-0.044,1.465-0.132
-    c0.35-0.089,0.714-0.223,1.091-0.396c0.29-0.138,0.561-0.303,0.814-0.494c0.253-0.193,0.517-0.426,0.791-0.699h0.072
-    c0.168,0.546,0.484,0.965,0.949,1.259c0.465,0.293,1.19,0.438,2.176,0.438c0.536,0,1.045-0.064,1.525-0.192s0.896-0.269,1.25-0.421
-    V17.895z M14.133,16.593c-0.217,0.265-0.468,0.487-0.754,0.668c-0.286,0.183-0.65,0.271-1.094,0.271
-    c-0.419,0-0.771-0.139-1.057-0.42c-0.286-0.282-0.429-0.738-0.429-1.364c0-0.475,0.083-0.887,0.253-1.238
-    c0.169-0.349,0.403-0.638,0.701-0.862c0.282-0.217,0.644-0.424,1.087-0.622c0.443-0.197,0.89-0.372,1.342-0.525L14.133,16.593z"/>
-</svg>
-
-        </a>for<a href="#"  class="footer__copyright-for">
-
-         <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     width="26.096px" height="31.803px" viewBox="0 0 26.096 33.803" enable-background="new 0 0 26.096 33.803" xml:space="preserve">
-<g>
-    <path d="M13.047,0L0,1.456v24.475l13.047,7.835v0.037l13.049-7.872V1.557L13.047,0z M24.037,24.745l-10.989,6.622v-7.385
-        l-6.369-2.858v-0.021l6.373-2.816v-0.02h0.001v0.011l6.366,2.814v-0.006l0.01,0.006v-1.234l-6.366-2.813l-0.003,0.003l-0.007-0.003
-        v0.011h-0.001v-0.003L6.679,19.87v-1.235l0,0l5.848-2.584l-1.385-0.622l-4.463,1.973v-1.234l3.077-1.36l-1.385-0.622l-1.692,0.748
-        v-1.234l0.306-0.135l-3.73-1.674l9.793-4.248V2.084l10.989,1.321V24.745z"/>
-    <polygon points="19.428,17.389 14.958,15.414 13.57,16.035 19.428,18.624     "/>
-    <polygon points="19.428,14.921 17.734,14.172 16.346,14.793 19.428,16.155    "/>
-</g>
-</svg>
-
-
-</a></div>
-
-    </footer>
-
-
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25.988px" height="29.922px" viewBox="0 0 25.988 29.922" enable-background="new 0 0 25.988 29.922" xml:space="preserve">
+            <path d="M0,0h25.988v29.922l-12.994-4.811L0,29.922V0z M20.154,17.895c-0.241,0-0.509-0.006-0.801-0.018
+                c-0.293-0.014-0.508-0.051-0.645-0.116c-0.225-0.103-0.391-0.26-0.5-0.469c-0.107-0.21-0.162-0.492-0.162-0.854
+                c0-0.394,0.018-1.211,0.055-2.457c0.035-1.244,0.054-2.319,0.054-3.226c0-0.858-0.146-1.556-0.439-2.088
+                c-0.294-0.535-0.688-0.942-1.186-1.223c-0.522-0.289-1.108-0.481-1.758-0.572c-0.65-0.093-1.365-0.139-2.143-0.139
+                c-0.562,0-1.172,0.067-1.83,0.199c-0.659,0.132-1.24,0.318-1.746,0.56C8.54,7.725,8.104,8.02,7.747,8.377
+                C7.39,8.734,7.211,9.137,7.211,9.586c0,0.521,0.173,0.946,0.519,1.271c0.346,0.323,0.857,0.486,1.533,0.486
+                c0.476,0,0.827-0.043,1.057-0.132c0.229-0.089,0.437-0.213,0.622-0.374c0.138-0.12,0.242-0.283,0.314-0.487
+                c0.072-0.205,0.109-0.375,0.109-0.511c0-0.306-0.057-0.622-0.169-0.952c-0.113-0.329-0.181-0.573-0.206-0.734
+                c0.145-0.104,0.335-0.207,0.572-0.308c0.237-0.101,0.533-0.151,0.886-0.151c0.393,0,0.71,0.089,0.952,0.265
+                c0.241,0.177,0.417,0.393,0.53,0.651c0.104,0.225,0.172,0.501,0.205,0.831c0.032,0.327,0.048,0.593,0.048,0.794v1.155
+                c-0.467,0.224-1.207,0.48-2.22,0.767c-1.013,0.285-1.881,0.56-2.604,0.826c-0.378,0.143-0.726,0.3-1.043,0.471
+                c-0.317,0.169-0.597,0.38-0.838,0.639c-0.265,0.281-0.47,0.605-0.615,0.969c-0.145,0.366-0.217,0.811-0.217,1.333
+                c0,0.909,0.329,1.637,0.989,2.189c0.658,0.551,1.455,0.825,2.388,0.825c0.627,0,1.115-0.044,1.465-0.132
+                c0.35-0.089,0.714-0.223,1.091-0.396c0.29-0.138,0.561-0.303,0.814-0.494c0.253-0.193,0.517-0.426,0.791-0.699h0.072
+                c0.168,0.546,0.484,0.965,0.949,1.259c0.465,0.293,1.19,0.438,2.176,0.438c0.536,0,1.045-0.064,1.525-0.192s0.896-0.269,1.25-0.421
+                V17.895z M14.133,16.593c-0.217,0.265-0.468,0.487-0.754,0.668c-0.286,0.183-0.65,0.271-1.094,0.271
+                c-0.419,0-0.771-0.139-1.057-0.42c-0.286-0.282-0.429-0.738-0.429-1.364c0-0.475,0.083-0.887,0.253-1.238
+                c0.169-0.349,0.403-0.638,0.701-0.862c0.282-0.217,0.644-0.424,1.087-0.622c0.443-0.197,0.89-0.372,1.342-0.525L14.133,16.593z"/>
+            </svg>
+        </a>for
+        <a href="#"  class="footer__copyright-for">
+            <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.096px" height="31.803px" viewBox="0 0 26.096 33.803" enable-background="new 0 0 26.096 33.803" xml:space="preserve"><g><path d="M13.047,0L0,1.456v24.475l13.047,7.835v0.037l13.049-7.872V1.557L13.047,0z M24.037,24.745l-10.989,6.622v-7.385 l-6.369-2.858v-0.021l6.373-2.816v-0.02h0.001v0.011l6.366,2.814v-0.006l0.01,0.006v-1.234l-6.366-2.813l-0.003,0.003l-0.007-0.003 v0.011h-0.001v-0.003L6.679,19.87v-1.235l0,0l5.848-2.584l-1.385-0.622l-4.463,1.973v-1.234l3.077-1.36l-1.385-0.622l-1.692,0.748 v-1.234l0.306-0.135l-3.73-1.674l9.793-4.248V2.084l10.989,1.321V24.745z"/>
+                <polygon points="19.428,17.389 14.958,15.414 13.57,16.035 19.428,18.624     "/>
+                <polygon points="19.428,14.921 17.734,14.172 16.346,14.793 19.428,16.155    "/>
+            </g>
+            </svg>
+        </a>
+    </div>
+</footer>
 <script src="js/script.js"></script>
-
 </body>
 </html>
