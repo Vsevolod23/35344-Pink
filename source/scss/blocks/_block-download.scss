@@ -1,0 +1,178 @@
+
+.page-download{
+
+    background: map-get($bg-clrs, bg-blue) url("../img/background-1@1x.jpg") no-repeat 50% 0;
+    position: relative;
+    padding-top:1px;
+    padding-bottom: 10px;
+    background-size: auto 460px;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 285px;
+        width: 260px;
+        background: url("../img/iphone-hand-1.png") no-repeat;
+        top: 175px;
+        left: 0;
+    }
+
+    @media(min-width: 480px) and (max-width: 1200px){
+        background: map-get($bg-clrs, bg-blue) url("../img/background-2@1x.jpg") no-repeat 50% 0;
+        padding-bottom: 100px;
+
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 485px;
+            height: 545px;
+            background: url("../img/iphone-hand-2@1x.png") no-repeat -185px;
+            top: 180px;
+            left: 185px;
+        }
+    }
+    @media(min-width: 1200px){
+        background: map-get($bg-clrs, bg-blue) url("../img/background-fullsize.jpg") no-repeat 50% 0;
+        background-size: 100%;
+        padding-bottom: 100px;
+
+         &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 570px;
+            height: 595px;
+            background: url("../img/iphone-hand-3@1x.png") no-repeat -330px 0px;
+            top: 210px;
+            left: 475px;
+            overflow: hidden;
+
+        }
+    }
+    
+        &__title{
+            font-size: map-get($font-sizes, f-h2);
+            font-weight: 100;
+            color: map-get($text-clrs, txt-white);
+            display: block;
+            margin-top: 75px;
+            text-align: center;
+            padding: 10px;
+                // времено, отцентровать заголовок
+            @media(max-width: 480px){
+                padding: 10px 30px;
+            }
+                // ....
+
+            @media(min-width: 480px) and (max-width: 1200px){
+                font-size: 40px;
+                margin-top: 200px;
+                line-height: 45px;
+                width: 200px;
+                box-sizing: border-box;
+                margin-left: 90px;
+            } 
+
+             @media(min-width: 1200px){
+                font-size: 50px;
+                margin-top: 225px;
+                line-height: 55px;
+                width: 250px;
+                box-sizing: border-box;
+                margin-left: 150px;
+             }
+
+        }
+
+        .btn{
+            margin: 0 auto;
+            margin-top: 322px;
+            display: block;
+            width: 280px;
+            height: 56px;
+            border: 3px solid #fff;
+            border-radius: 27px;
+            color: #fff;
+            line-height: 50px;
+            vertical-align: middle;
+            text-align: center;
+            font-size: 18px;
+            box-sizing: border-box;
+            font-weight: bold;
+            position: relative;
+            z-index: 10;
+
+            &:hover {
+                background: #fff;
+                color: #d22856;
+            }
+
+             &:active {
+                background: #fff;
+                color: rgba(210, 40, 86, .5);
+             }
+
+            @media(min-width: 480px) and (max-width: 1200px){
+                margin-top: 35px;
+                margin-left: 40px;
+            } 
+
+            @media(min-width: 1200px){
+                margin-top: 50px;
+                margin-left: 130px;
+            }
+        }
+
+
+        &__app-wrapper{
+            margin: 0 auto;
+            bottom: 0;
+            width: 280px;
+            position: relative;
+            z-index: 10;
+
+            @media(min-width: 480px) and (max-width: 1200px){
+                margin-left: 40px;
+            } 
+
+            @media(min-width: 1200px){
+                margin-left: 130px;
+                width: 300px;
+            }
+
+            p{
+                margin-top: 20px;
+                padding-bottom: 11px;
+                font-size: map-get($font-sizes, f-p);
+                text-align: center;
+                color: map-get($text-clrs, txt-white);
+                font-weight: 100;
+            
+                @media(min-width: 1200px){
+                    font-size: 18px;
+                    line-height: 24px;
+                    width: 300px;
+                }
+
+            }
+        }
+
+        .page-download__app-list{
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    margin-top: 30px;
+
+                        li{
+                            display: inline-block;
+                            margin-left: 35px;
+                            
+                        }
+                }
+
+
+
+}

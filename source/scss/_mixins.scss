@@ -1,0 +1,25 @@
+@mixin inline-block($valign: top) {
+    display: inline-block;
+    vertical-align: $valign;
+}
+
+/*
+    wrapper-center лучше убрать в helpers и переделать также как no-list
+    pagination-style - лучше просто чтобы контролировалось через классы в верстке
+*/
+
+
+@mixin right-triangle {
+    margin-top: 5px;
+    height: 34px;
+    background: linear-gradient(to top left, map-get($bg-clrs, bg-grey) 0%, map-get($bg-clrs, bg-grey) 50%, map-get($bg-clrs, bg-white) 50%, map-get($bg-clrs, bg-white) 100%);
+
+    @media(min-width: 480px) and (max-width: 1200px){
+        height: 54px;
+    }
+
+    @media(min-width: 1200px){
+        height: 100px;
+    }
+}
+
