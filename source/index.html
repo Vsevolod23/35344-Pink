@@ -8,39 +8,6 @@
     <title>HTML Academy: Pink</title>
     <link rel="stylesheet" href="css/style.css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-
-    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-
-    <script type="text/javascript">
-        ymaps.ready(init);
-        var myMap, 
-            myPlacemark;
-
-        function init(){ 
-            myMap = new ymaps.Map("map", {
-                center: [59.936323, 30.32115],
-                zoom: 16
-            }); 
-            
-            myPlacemark = new ymaps.Placemark([59.936323, 30.32115], {
-                hintContent: 'Санкт-Петербург, Невский проспект, д.20',
-                balloonContent: ''
-            }, {
-                // Опции.
-                // Необходимо указать данный тип макета.
-                iconLayout: 'default#image',
-                // Своё изображение иконки метки.
-                iconImageHref: 'img/map-icon.png',
-                // Размеры метки.
-                iconImageSize: [36, 36],
-                // Смещение левого верхнего угла иконки относительно
-                // её "ножки" (точки привязки).
-                iconImageOffset: [-3, -42]
-            });
-            
-            myMap.geoObjects.add(myPlacemark);
-        }
-    </script>
 </head>
 <body>
     <header class="page-header">
@@ -248,6 +215,38 @@
         </a>
     </div>
 </footer>
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+
+        function init(){ 
+            myMap = new ymaps.Map("map", {
+                center: [59.936323, 30.32115],
+                zoom: 16
+            }); 
+            
+            myPlacemark = new ymaps.Placemark([59.936323, 30.32115], {
+                hintContent: 'Санкт-Петербург, Невский проспект, д.20',
+                balloonContent: ''
+            }, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: 'img/map-icon.png',
+                // Размеры метки.
+                iconImageSize: [36, 36],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-3, -42]
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
 </body>
 </html>
